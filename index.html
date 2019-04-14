@@ -1423,7 +1423,190 @@
                     <h4 class="text-primary"> Поля, отмеченные *, являются обязательными для заполнения </h4>
                   </form>
                 </div>
-              </div><a class="btn btn-block btn-lg btn-success" href="#">Образовательные стандарты</a><a class="btn btn-primary btn-block btn-lg" href="#">Руководство. Педагогический (научно-педагогический) состав</a><a class="btn btn-primary btn-block btn-lg" href="#">Материально-техническое обеспечение и оснащённость образовательного процесса</a><a class="btn btn-primary btn-block btn-lg" href="#">Стипендии и иные виды материальной поддержки</a><a class="btn btn-primary btn-block btn-lg" href="#">Платные образовательные услуги</a><a class="btn btn-primary btn-block btn-lg" href="#">Финансово-хозяйственная деятельность</a><a class="btn btn-primary btn-block btn-lg" href="#">Вакантные места для приема (перевода)</a>
+              </div><a class="btn btn-block btn-lg btn-success mb-3" href="#" id="standart-btn">Образовательные стандарты</a>
+              <div class="card mb-3">
+                <div class="card-header">Редактировать страницу</div>
+                <div class="card-body">
+                  <form id="data_form" class="AVAST_PAM_nonloginform">
+                    <input name="base[draft]" type="hidden" id="draft" value="0">
+                    <h4>Копии федеральных государственных образовательных стандартов (при их использовании допускается размещение в подразделе гиперссылки на соответствующие документы на сайте Министерства образования и науки Российской Федерации)</h4>
+                    <div class="form_row col-md-12">
+                      <table class="table" id="documents">
+                        <tbody>
+                          <tr>
+                            <th>&nbsp;&nbsp;</th>
+                            <th>Наименование документа (*)</th>
+                            <th>Url (*)</th>
+                          </tr>
+                          <tr id="document_1">
+                            <td>
+                              <input type="checkbox" class="document row_checker" name="document_1" value="1">
+                            </td>
+                            <td>
+                              <textarea name="documents[0][name]" rows="2" class="name form-control"></textarea>
+                              <div class="error text-danger"></div>
+                            </td>
+                            <td>
+                              <textarea name="documents[0][url]" rows="2" class="url form-control"></textarea>
+                              <div class="error text-danger"></div>
+                            </td>
+                          </tr>
+                          <tr id="document_2">
+                            <td>
+                              <input type="checkbox" class="document row_checker" name="document_2" value="1">
+                            </td>
+                            <td>
+                              <textarea name="documents[1][name]" rows="2" class="name form-control"></textarea>
+                              <div class="error text-danger"></div>
+                            </td>
+                            <td>
+                              <textarea name="documents[1][url]" rows="2" class="url form-control"></textarea>
+                              <div class="error text-danger"></div>
+                            </td>
+                          </tr>
+                          <tr id="document_3">
+                            <td>
+                              <input type="checkbox" class="document row_checker" name="document_3" value="1">
+                            </td>
+                            <td>
+                              <textarea name="documents[2][name]" rows="2" class="name form-control"></textarea>
+                              <div class="error text-danger"></div>
+                            </td>
+                            <td>
+                              <textarea name="documents[2][url]" rows="2" class="url form-control"></textarea>
+                              <div class="error text-danger"></div>
+                            </td>
+                          </tr>
+                          <tr id="document_4">
+                            <td>
+                              <input type="checkbox" class="document row_checker" name="document_4" value="1">
+                            </td>
+                            <td>
+                              <textarea name="documents[3][name]" rows="2" class="name form-control"></textarea>
+                              <div class="error text-danger"></div>
+                            </td>
+                            <td>
+                              <textarea name="documents[3][url]" rows="2" class="url form-control"></textarea>
+                              <div class="error text-danger"></div>
+                            </td>
+                          </tr>
+                          <tr id="document_5">
+                            <td>
+                              <input type="checkbox" class="document row_checker" name="document_5" value="1">
+                            </td>
+                            <td>
+                              <textarea name="documents[4][name]" rows="2" class="name form-control"></textarea>
+                              <div class="error text-danger"></div>
+                            </td>
+                            <td>
+                              <textarea name="documents[4][url]" rows="2" class="url form-control"></textarea>
+                              <div class="error text-danger"></div>
+                            </td>
+                          </tr>
+                          <tr id="document_6">
+                            <td>
+                              <input type="checkbox" class="document row_checker" name="document_6" value="1">
+                            </td>
+                            <td>
+                              <textarea name="documents[5][name]" rows="2" class="name form-control"></textarea>
+                              <div class="error text-danger"></div>
+                            </td>
+                            <td>
+                              <textarea name="documents[5][url]" rows="2" class="url form-control"></textarea>
+                              <div class="error text-danger"></div>
+                            </td>
+                          </tr>
+                          <tr id="document_7">
+                            <td>
+                              <input type="checkbox" class="document row_checker" name="document_7" value="1">
+                            </td>
+                            <td>
+                              <textarea name="documents[6][name]" rows="2" class="name form-control"></textarea>
+                              <div class="error text-danger"></div>
+                            </td>
+                            <td>
+                              <textarea name="documents[6][url]" rows="2" class="url form-control"></textarea>
+                              <div class="error text-danger"></div>
+                            </td>
+                          </tr>
+                          <tr id="document_8">
+                            <td>
+                              <input type="checkbox" class="document row_checker" name="document_8" value="1">
+                            </td>
+                            <td>
+                              <textarea name="documents[7][name]" rows="2" class="name form-control"></textarea>
+                              <div class="error text-danger"></div>
+                            </td>
+                            <td>
+                              <textarea name="documents[7][url]" rows="2" class="url form-control"></textarea>
+                              <div class="error text-danger"></div>
+                            </td>
+                          </tr>
+                          <tr id="document_9">
+                            <td>
+                              <input type="checkbox" class="document row_checker" name="document_9" value="1">
+                            </td>
+                            <td>
+                              <textarea name="documents[8][name]" rows="2" class="name form-control"></textarea>
+                              <div class="error text-danger"></div>
+                            </td>
+                            <td>
+                              <textarea name="documents[8][url]" rows="2" class="url form-control"></textarea>
+                              <div class="error text-danger"></div>
+                            </td>
+                          </tr>
+                          <tr id="document_10">
+                            <td>
+                              <input type="checkbox" class="document row_checker" name="document_10" value="1">
+                            </td>
+                            <td>
+                              <textarea name="documents[9][name]" rows="2" class="name form-control"></textarea>
+                              <div class="error text-danger"></div>
+                            </td>
+                            <td>
+                              <textarea name="documents[9][url]" rows="2" class="url form-control"></textarea>
+                              <div class="error text-danger"></div>
+                            </td>
+                          </tr>
+                          <tr id="document_11">
+                            <td>
+                              <input type="checkbox" class="document row_checker" name="document_11" value="1">
+                            </td>
+                            <td>
+                              <textarea name="documents[10][name]" rows="2" class="name form-control"></textarea>
+                              <div class="error text-danger"></div>
+                            </td>
+                            <td>
+                              <textarea name="documents[10][url]" rows="2" class="url form-control"></textarea>
+                              <div class="error text-danger"></div>
+                            </td>
+                          </tr>
+                          <tr id="document_12">
+                            <td>
+                              <input type="checkbox" class="document row_checker" name="document_12" value="1">
+                            </td>
+                            <td>
+                              <textarea name="documents[11][name]" rows="2" class="name form-control"></textarea>
+                              <div class="error text-danger"></div>
+                            </td>
+                            <td>
+                              <textarea name="documents[11][url]" rows="2" class="url form-control"></textarea>
+                              <div class="error text-danger"></div>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <div class="btn-group">
+                        <button type="button" class="btn btn-primary add add_document"><span class="glyphicon glyphicon-plus"></span> Добавить</button>
+                        <button type="button" class="btn btn-danger remove"><span class="glyphicon glyphicon-minus"></span> Удалить</button>
+                        <button type="button" class="btn btn-danger remove_selected_documents"><span class="glyphicon glyphicon-remove"></span> Удалить выделенные</button>
+                      </div>
+                      <hr>
+                    </div>
+                    <h4 class="text-primary"> Поля, отмеченные *, являются обязательными для заполнения </h4>
+                  </form>
+                </div>
+              </div><a class="btn btn-primary btn-block btn-lg" href="#">Руководство. Педагогический (научно-педагогический) состав</a><a class="btn btn-primary btn-block btn-lg" href="#">Материально-техническое обеспечение и оснащённость образовательного процесса</a><a class="btn btn-primary btn-block btn-lg" href="#">Стипендии и иные виды материальной поддержки</a><a class="btn btn-primary btn-block btn-lg" href="#">Платные образовательные услуги</a><a class="btn btn-primary btn-block btn-lg" href="#">Финансово-хозяйственная деятельность</a><a class="btn btn-primary btn-block btn-lg" href="#">Вакантные места для приема (перевода)</a>
             </div>
           </div>
         </div>
