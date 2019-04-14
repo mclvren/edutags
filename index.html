@@ -16,10 +16,10 @@
 </head>
 
 <body class="bg-light">
-  <div class="py-5">
+  <div class="py-5 w-100">
     <div class="container">
       <div class="row">
-        <div class="text-center col-md-7 mx-auto bg-dark"> <img src="http://www.polytech21.ru/templates/rt_refraction/images/main/light/logo.png" class="p-3">
+        <div class="text-center bg-dark w-100"> <img src="http://www.polytech21.ru/templates/rt_refraction/images/main/light/logo.png" class="p-3">
           <h2 class="pb-2">Генерация страниц</h2>
         </div>
       </div>
@@ -32,7 +32,7 @@
           <form class="needs-validation p-2" novalidate="">
             <button type="submit" class="btn btn-lg btn-warning" contenteditable="true">Скачать</button><button type="submit" class="float-right btn btn-lg btn-danger">Изменить теги</button></form>
           <div class="row">
-            <div class="col-md-14"><a class="btn btn-block btn-lg btn-success" href="#">Основные сведения</a>
+            <div class="col-md-14" style=""><a class="btn btn-block btn-lg btn-success" href="#">Основные сведения</a>
               <div class="row">
                 <div class="col-md-12 mb-3">
                   <div class="card">
@@ -203,7 +203,574 @@
                     <h4 class="text-primary"> Поля, отмеченные *, являются обязательными для заполнения </h4>
                   </form>
                 </div><a class="btn btn-block btn-lg btn-warning" href="#"><i class="fa fa-fw fa-check"></i><b>Сохранить</b></a>
-              </div><a class="btn btn-primary btn-block btn-lg" href="#">Документы</a><a class="btn btn-block btn-lg btn-success" href="#">Образование</a><a class="btn btn-block btn-lg btn-success" href="#">Образовательные стандарты</a><a class="btn btn-primary btn-block btn-lg" href="#">Руководство. Педагогический (научно-педагогический) состав</a><a class="btn btn-primary btn-block btn-lg" href="#">Материально-техническое обеспечение и оснащённость образовательного процесса</a><a class="btn btn-primary btn-block btn-lg" href="#">Стипендии и иные виды материальной поддержки</a><a class="btn btn-primary btn-block btn-lg" href="#">Платные образовательные услуги</a><a class="btn btn-primary btn-block btn-lg" href="#">Финансово-хозяйственная деятельность</a><a class="btn btn-primary btn-block btn-lg" href="#">Вакантные места для приема (перевода)</a>
+              </div><a class="btn btn-primary btn-block btn-lg" href="#">Документы</a>
+              <div class="card mb-3">
+                <div class="card-header"> Добавление страницы </div>
+                <div class="card-body">
+                  <form id="data_form" class="AVAST_PAM_nonloginform">
+                    <input name="base[draft]" type="hidden" id="draft" value="">
+                    <h4>Устав образовательной организации</h4>
+                    <div class="form_row col-md-12">
+                      <table class="table" id="ustavs">
+                        <tbody>
+                          <tr>
+                            <th>&nbsp;&nbsp;</th>
+                            <th>Наименование документа (*)</th>
+                            <th>Url (*)</th>
+                          </tr>
+                          <tr id="ustavs_1">
+                            <td>
+                              <input type="checkbox" class="ustavs row_checker" name="ustavs_1" value="1">
+                            </td>
+                            <td>
+                              <textarea name="ustavs[0][name]" rows="2" class="name form-control"></textarea>
+                              <div class="error text-danger"></div>
+                            </td>
+                            <td>
+                              <textarea name="ustavs[0][url]" rows="2" class="url form-control"></textarea>
+                              <div class="error text-danger"></div>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <div class="btn-group">
+                        <button type="button" class="btn btn-primary add"><span class="glyphicon glyphicon-plus"></span> Добавить</button>
+                        <button type="button" class="btn btn-danger remove"><span class="glyphicon glyphicon-minus"></span> Удалить</button>
+                        <button type="button" class="btn btn-danger remove_selected"><span class="glyphicon glyphicon-remove"></span> Удалить выделенные</button>
+                      </div>
+                      <hr>
+                    </div>
+                    <h4>Лицензия на осуществление образовательной деятельности</h4>
+                    <div class="form_row col-md-12">
+                      <table class="table" id="licenses">
+                        <tbody>
+                          <tr>
+                            <th>&nbsp;&nbsp;</th>
+                            <th>Наименование документа (*)</th>
+                            <th>Url (*)</th>
+                          </tr>
+                          <tr id="licenses_1">
+                            <td>
+                              <input type="checkbox" class="licenses row_checker" name="licenses_1" value="1">
+                            </td>
+                            <td>
+                              <textarea name="licenses[0][name]" rows="2" class="name form-control"></textarea>
+                              <div class="error text-danger"></div>
+                            </td>
+                            <td>
+                              <textarea name="licenses[0][url]" rows="2" class="url form-control"></textarea>
+                              <div class="error text-danger"></div>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <div class="btn-group">
+                        <button type="button" class="btn btn-primary add"><span class="glyphicon glyphicon-plus"></span> Добавить</button>
+                        <button type="button" class="btn btn-danger remove"><span class="glyphicon glyphicon-minus"></span> Удалить</button>
+                        <button type="button" class="btn btn-danger remove_selected"><span class="glyphicon glyphicon-remove"></span> Удалить выделенные</button>
+                      </div>
+                      <hr>
+                    </div>
+                    <h4>Свидетельство о государственной аккредитации (с приложениями)</h4>
+                    <div class="form_row col-md-12">
+                      <table class="table" id="accreditations">
+                        <tbody>
+                          <tr>
+                            <th>&nbsp;&nbsp;</th>
+                            <th>Наименование документа (*)</th>
+                            <th>Url (*)</th>
+                          </tr>
+                          <tr id="accreditations_1">
+                            <td>
+                              <input type="checkbox" class="accreditations row_checker" name="accreditations_1" value="1">
+                            </td>
+                            <td>
+                              <textarea name="accreditations[0][name]" rows="2" class="name form-control"></textarea>
+                              <div class="error text-danger"></div>
+                            </td>
+                            <td>
+                              <textarea name="accreditations[0][url]" rows="2" class="url form-control"></textarea>
+                              <div class="error text-danger"></div>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <div class="btn-group">
+                        <button type="button" class="btn btn-primary add"><span class="glyphicon glyphicon-plus"></span> Добавить</button>
+                        <button type="button" class="btn btn-danger remove"><span class="glyphicon glyphicon-minus"></span> Удалить</button>
+                        <button type="button" class="btn btn-danger remove_selected"><span class="glyphicon glyphicon-remove"></span> Удалить выделенные</button>
+                      </div>
+                      <hr>
+                    </div>
+                    <h4>План финансово-хозяйственной деятельности образовательной организации, утвержденный в установленном законодательством Российской Федерации порядке, или бюджетные сметы образовательной организации</h4>
+                    <div class="form_row col-md-12">
+                      <table class="table" id="fin_plans">
+                        <tbody>
+                          <tr>
+                            <th>&nbsp;&nbsp;</th>
+                            <th>Наименование документа (*)</th>
+                            <th>Url (*)</th>
+                          </tr>
+                          <tr id="fin_plans_1">
+                            <td>
+                              <input type="checkbox" class="fin_plans row_checker" name="fin_plans_1" value="1">
+                            </td>
+                            <td>
+                              <textarea name="fin_plans[0][name]" rows="2" class="name form-control"></textarea>
+                              <div class="error text-danger"></div>
+                            </td>
+                            <td>
+                              <textarea name="fin_plans[0][url]" rows="2" class="url form-control"></textarea>
+                              <div class="error text-danger"></div>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <div class="btn-group">
+                        <button type="button" class="btn btn-primary add"><span class="glyphicon glyphicon-plus"></span> Добавить</button>
+                        <button type="button" class="btn btn-danger remove"><span class="glyphicon glyphicon-minus"></span> Удалить</button>
+                        <button type="button" class="btn btn-danger remove_selected"><span class="glyphicon glyphicon-remove"></span> Удалить выделенные</button>
+                      </div>
+                      <hr>
+                    </div>
+                    <h4>Локальные нормативные акты, регламентирующие правила приема обучающихся</h4>
+                    <div class="form_row col-md-12">
+                      <table class="table" id="priems">
+                        <tbody>
+                          <tr>
+                            <th>&nbsp;&nbsp;</th>
+                            <th>Наименование документа (*)</th>
+                            <th>Url (*)</th>
+                          </tr>
+                          <tr id="priems_1">
+                            <td>
+                              <input type="checkbox" class="priems row_checker" name="priems_1" value="1">
+                            </td>
+                            <td>
+                              <textarea name="priems[0][name]" rows="2" class="name form-control"></textarea>
+                              <div class="error text-danger"></div>
+                            </td>
+                            <td>
+                              <textarea name="priems[0][url]" rows="2" class="url form-control"></textarea>
+                              <div class="error text-danger"></div>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <div class="btn-group">
+                        <button type="button" class="btn btn-primary add"><span class="glyphicon glyphicon-plus"></span> Добавить</button>
+                        <button type="button" class="btn btn-danger remove"><span class="glyphicon glyphicon-minus"></span> Удалить</button>
+                        <button type="button" class="btn btn-danger remove_selected"><span class="glyphicon glyphicon-remove"></span> Удалить выделенные</button>
+                      </div>
+                      <hr>
+                    </div>
+                    <h4>Локальные нормативные акты, регламентирующие режим занятий обучающихся</h4>
+                    <div class="form_row col-md-12">
+                      <table class="table" id="modes">
+                        <tbody>
+                          <tr>
+                            <th>&nbsp;&nbsp;</th>
+                            <th>Наименование документа (*)</th>
+                            <th>Url (*)</th>
+                          </tr>
+                          <tr id="modes_1">
+                            <td>
+                              <input type="checkbox" class="modes row_checker" name="modes_1" value="1">
+                            </td>
+                            <td>
+                              <textarea name="modes[0][name]" rows="2" class="name form-control"></textarea>
+                              <div class="error text-danger"></div>
+                            </td>
+                            <td>
+                              <textarea name="modes[0][url]" rows="2" class="url form-control"></textarea>
+                              <div class="error text-danger"></div>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <div class="btn-group">
+                        <button type="button" class="btn btn-primary add"><span class="glyphicon glyphicon-plus"></span> Добавить</button>
+                        <button type="button" class="btn btn-danger remove"><span class="glyphicon glyphicon-minus"></span> Удалить</button>
+                        <button type="button" class="btn btn-danger remove_selected"><span class="glyphicon glyphicon-remove"></span> Удалить выделенные</button>
+                      </div>
+                      <hr>
+                    </div>
+                    <h4>Локальные нормативные акты, регламентирующие формы, периодичность и порядок текущего контроля успеваемости и промежуточной аттестации обучающихся</h4>
+                    <div class="form_row col-md-12">
+                      <table class="table" id="tek_kontrols">
+                        <tbody>
+                          <tr>
+                            <th>&nbsp;&nbsp;</th>
+                            <th>Наименование документа (*)</th>
+                            <th>Url (*)</th>
+                          </tr>
+                          <tr id="tek_kontrols_1">
+                            <td>
+                              <input type="checkbox" class="tek_kontrols row_checker" name="tek_kontrols_1" value="1">
+                            </td>
+                            <td>
+                              <textarea name="tek_kontrols[0][name]" rows="2" class="name form-control"></textarea>
+                              <div class="error text-danger"></div>
+                            </td>
+                            <td>
+                              <textarea name="tek_kontrols[0][url]" rows="2" class="url form-control"></textarea>
+                              <div class="error text-danger"></div>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <div class="btn-group">
+                        <button type="button" class="btn btn-primary add"><span class="glyphicon glyphicon-plus"></span> Добавить</button>
+                        <button type="button" class="btn btn-danger remove"><span class="glyphicon glyphicon-minus"></span> Удалить</button>
+                        <button type="button" class="btn btn-danger remove_selected"><span class="glyphicon glyphicon-remove"></span> Удалить выделенные</button>
+                      </div>
+                      <hr>
+                    </div>
+                    <h4>Локальные нормативные акты, регламентирующие порядок и основания перевода, отчисления и восстановления обучающихся</h4>
+                    <div class="form_row col-md-12">
+                      <table class="table" id="perevods">
+                        <tbody>
+                          <tr>
+                            <th>&nbsp;&nbsp;</th>
+                            <th>Наименование документа (*)</th>
+                            <th>Url (*)</th>
+                          </tr>
+                          <tr id="perevods_1">
+                            <td>
+                              <input type="checkbox" class="perevods row_checker" name="perevods_1" value="1">
+                            </td>
+                            <td>
+                              <textarea name="perevods[0][name]" rows="2" class="name form-control"></textarea>
+                              <div class="error text-danger"></div>
+                            </td>
+                            <td>
+                              <textarea name="perevods[0][url]" rows="2" class="url form-control"></textarea>
+                              <div class="error text-danger"></div>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <div class="btn-group">
+                        <button type="button" class="btn btn-primary add"><span class="glyphicon glyphicon-plus"></span> Добавить</button>
+                        <button type="button" class="btn btn-danger remove"><span class="glyphicon glyphicon-minus"></span> Удалить</button>
+                        <button type="button" class="btn btn-danger remove_selected"><span class="glyphicon glyphicon-remove"></span> Удалить выделенные</button>
+                      </div>
+                      <hr>
+                    </div>
+                    <h4>Локальные нормативные акты, регламентирующие порядок оформления возникновения, приостановления и прекращения отношений между образовательной организацией, обучающимися и (или) родителями (законными представителями) несовершеннолетних обучающихся</h4>
+                    <div class="form_row col-md-12">
+                      <table class="table" id="vozes">
+                        <tbody>
+                          <tr>
+                            <th>&nbsp;&nbsp;</th>
+                            <th>Наименование документа (*)</th>
+                            <th>Url (*)</th>
+                          </tr>
+                          <tr id="vozes_1">
+                            <td>
+                              <input type="checkbox" class="vozes row_checker" name="vozes_1" value="1">
+                            </td>
+                            <td>
+                              <textarea name="vozes[0][name]" rows="2" class="name form-control"></textarea>
+                              <div class="error text-danger"></div>
+                            </td>
+                            <td>
+                              <textarea name="vozes[0][url]" rows="2" class="url form-control"></textarea>
+                              <div class="error text-danger"></div>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <div class="btn-group">
+                        <button type="button" class="btn btn-primary add"><span class="glyphicon glyphicon-plus"></span> Добавить</button>
+                        <button type="button" class="btn btn-danger remove"><span class="glyphicon glyphicon-minus"></span> Удалить</button>
+                        <button type="button" class="btn btn-danger remove_selected"><span class="glyphicon glyphicon-remove"></span> Удалить выделенные</button>
+                      </div>
+                      <hr>
+                    </div>
+                    <h4>Правила внутреннего распорядка обучающихся</h4>
+                    <div class="form_row col-md-12">
+                      <table class="table" id="local_act_studs">
+                        <tbody>
+                          <tr>
+                            <th>&nbsp;&nbsp;</th>
+                            <th>Наименование документа (*)</th>
+                            <th>Url (*)</th>
+                          </tr>
+                          <tr id="local_act_studs_1">
+                            <td>
+                              <input type="checkbox" class="local_act_studs row_checker" name="local_act_studs_1" value="1">
+                            </td>
+                            <td>
+                              <textarea name="local_act_studs[0][name]" rows="2" class="name form-control"></textarea>
+                              <div class="error text-danger"></div>
+                            </td>
+                            <td>
+                              <textarea name="local_act_studs[0][url]" rows="2" class="url form-control"></textarea>
+                              <div class="error text-danger"></div>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <div class="btn-group">
+                        <button type="button" class="btn btn-primary add"><span class="glyphicon glyphicon-plus"></span> Добавить</button>
+                        <button type="button" class="btn btn-danger remove"><span class="glyphicon glyphicon-minus"></span> Удалить</button>
+                        <button type="button" class="btn btn-danger remove_selected"><span class="glyphicon glyphicon-remove"></span> Удалить выделенные</button>
+                      </div>
+                      <hr>
+                    </div>
+                    <h4>Правила внутреннего трудового распорядка</h4>
+                    <div class="form_row col-md-12">
+                      <table class="table" id="local_act_orders">
+                        <tbody>
+                          <tr>
+                            <th>&nbsp;&nbsp;</th>
+                            <th>Наименование документа (*)</th>
+                            <th>Url (*)</th>
+                          </tr>
+                          <tr id="local_act_orders_1">
+                            <td>
+                              <input type="checkbox" class="local_act_orders row_checker" name="local_act_orders_1" value="1">
+                            </td>
+                            <td>
+                              <textarea name="local_act_orders[0][name]" rows="2" class="name form-control"></textarea>
+                              <div class="error text-danger"></div>
+                            </td>
+                            <td>
+                              <textarea name="local_act_orders[0][url]" rows="2" class="url form-control"></textarea>
+                              <div class="error text-danger"></div>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <div class="btn-group">
+                        <button type="button" class="btn btn-primary add"><span class="glyphicon glyphicon-plus"></span> Добавить</button>
+                        <button type="button" class="btn btn-danger remove"><span class="glyphicon glyphicon-minus"></span> Удалить</button>
+                        <button type="button" class="btn btn-danger remove_selected"><span class="glyphicon glyphicon-remove"></span> Удалить выделенные</button>
+                      </div>
+                      <hr>
+                    </div>
+                    <h4>Коллективный договор</h4>
+                    <div class="form_row col-md-12">
+                      <table class="table" id="local_act_collecs">
+                        <tbody>
+                          <tr>
+                            <th>&nbsp;&nbsp;</th>
+                            <th>Наименование документа (*)</th>
+                            <th>Url (*)</th>
+                          </tr>
+                          <tr id="local_act_collecs_1">
+                            <td>
+                              <input type="checkbox" class="local_act_collecs row_checker" name="local_act_collecs_1" value="1">
+                            </td>
+                            <td>
+                              <textarea name="local_act_collecs[0][name]" rows="2" class="name form-control"></textarea>
+                              <div class="error text-danger"></div>
+                            </td>
+                            <td>
+                              <textarea name="local_act_collecs[0][url]" rows="2" class="url form-control"></textarea>
+                              <div class="error text-danger"></div>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <div class="btn-group">
+                        <button type="button" class="btn btn-primary add"><span class="glyphicon glyphicon-plus"></span> Добавить</button>
+                        <button type="button" class="btn btn-danger remove"><span class="glyphicon glyphicon-minus"></span> Удалить</button>
+                        <button type="button" class="btn btn-danger remove_selected"><span class="glyphicon glyphicon-remove"></span> Удалить выделенные</button>
+                      </div>
+                      <hr>
+                    </div>
+                    <h4>Отчет о результатах самообследования</h4>
+                    <div class="form_row col-md-12">
+                      <table class="table" id="report_edus">
+                        <tbody>
+                          <tr>
+                            <th>&nbsp;&nbsp;</th>
+                            <th>Наименование документа (*)</th>
+                            <th>Url (*)</th>
+                          </tr>
+                          <tr id="report_edus_1">
+                            <td>
+                              <input type="checkbox" class="report_edus row_checker" name="report_edus_1" value="1">
+                            </td>
+                            <td>
+                              <textarea name="report_edus[0][name]" rows="2" class="name form-control"></textarea>
+                              <div class="error text-danger"></div>
+                            </td>
+                            <td>
+                              <textarea name="report_edus[0][url]" rows="2" class="url form-control"></textarea>
+                              <div class="error text-danger"></div>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <div class="btn-group">
+                        <button type="button" class="btn btn-primary add"><span class="glyphicon glyphicon-plus"></span> Добавить</button>
+                        <button type="button" class="btn btn-danger remove"><span class="glyphicon glyphicon-minus"></span> Удалить</button>
+                        <button type="button" class="btn btn-danger remove_selected"><span class="glyphicon glyphicon-remove"></span> Удалить выделенные</button>
+                      </div>
+                      <hr>
+                    </div>
+                    <h4>Документ о порядке оказания платных образовательных услуг</h4>
+                    <div class="form_row col-md-12">
+                      <table class="table" id="paid_edus">
+                        <tbody>
+                          <tr>
+                            <th>&nbsp;&nbsp;</th>
+                            <th>Наименование документа (*)</th>
+                            <th>Url (*)</th>
+                          </tr>
+                          <tr id="paid_edus_1">
+                            <td>
+                              <input type="checkbox" class="paid_edus row_checker" name="paid_edus_1" value="1">
+                            </td>
+                            <td>
+                              <textarea name="paid_edus[0][name]" rows="2" class="name form-control"></textarea>
+                              <div class="error text-danger"></div>
+                            </td>
+                            <td>
+                              <textarea name="paid_edus[0][url]" rows="2" class="url form-control"></textarea>
+                              <div class="error text-danger"></div>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <div class="btn-group">
+                        <button type="button" class="btn btn-primary add"><span class="glyphicon glyphicon-plus"></span> Добавить</button>
+                        <button type="button" class="btn btn-danger remove"><span class="glyphicon glyphicon-minus"></span> Удалить</button>
+                        <button type="button" class="btn btn-danger remove_selected"><span class="glyphicon glyphicon-remove"></span> Удалить выделенные</button>
+                      </div>
+                      <hr>
+                    </div>
+                    <h4>Образец договора об оказании платных образовательных услуг</h4>
+                    <div class="form_row col-md-12">
+                      <table class="table" id="paid_edu_dogs">
+                        <tbody>
+                          <tr>
+                            <th>&nbsp;&nbsp;</th>
+                            <th>Наименование документа (*)</th>
+                            <th>Url (*)</th>
+                          </tr>
+                          <tr id="paid_edu_dogs_1">
+                            <td>
+                              <input type="checkbox" class="paid_edu_dogs row_checker" name="paid_edu_dogs_1" value="1">
+                            </td>
+                            <td>
+                              <textarea name="paid_edu_dogs[0][name]" rows="2" class="name form-control"></textarea>
+                              <div class="error text-danger"></div>
+                            </td>
+                            <td>
+                              <textarea name="paid_edu_dogs[0][url]" rows="2" class="url form-control"></textarea>
+                              <div class="error text-danger"></div>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <div class="btn-group">
+                        <button type="button" class="btn btn-primary add"><span class="glyphicon glyphicon-plus"></span> Добавить</button>
+                        <button type="button" class="btn btn-danger remove"><span class="glyphicon glyphicon-minus"></span> Удалить</button>
+                        <button type="button" class="btn btn-danger remove_selected"><span class="glyphicon glyphicon-remove"></span> Удалить выделенные</button>
+                      </div>
+                      <hr>
+                    </div>
+                    <h4>Документ об утверждении стоимости обучения по каждой образовательной программе</h4>
+                    <div class="form_row col-md-12">
+                      <table class="table" id="paid_edu_stoims">
+                        <tbody>
+                          <tr>
+                            <th>&nbsp;&nbsp;</th>
+                            <th>Наименование документа (*)</th>
+                            <th>Url (*)</th>
+                          </tr>
+                          <tr id="paid_edu_stoims_1">
+                            <td>
+                              <input type="checkbox" class="paid_edu_stoims row_checker" name="paid_edu_stoims_1" value="1">
+                            </td>
+                            <td>
+                              <textarea name="paid_edu_stoims[0][name]" rows="2" class="name form-control"></textarea>
+                              <div class="error text-danger"></div>
+                            </td>
+                            <td>
+                              <textarea name="paid_edu_stoims[0][url]" rows="2" class="url form-control"></textarea>
+                              <div class="error text-danger"></div>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <div class="btn-group">
+                        <button type="button" class="btn btn-primary add"><span class="glyphicon glyphicon-plus"></span> Добавить</button>
+                        <button type="button" class="btn btn-danger remove"><span class="glyphicon glyphicon-minus"></span> Удалить</button>
+                        <button type="button" class="btn btn-danger remove_selected"><span class="glyphicon glyphicon-remove"></span> Удалить выделенные</button>
+                      </div>
+                      <hr>
+                    </div>
+                    <h4>Предписания органов, осуществляющих государственный контроль (надзор) в сфере образования</h4>
+                    <div class="form_row col-md-12">
+                      <table class="table" id="prescriptions">
+                        <tbody>
+                          <tr>
+                            <th>&nbsp;&nbsp;</th>
+                            <th>Наименование документа</th>
+                            <th>Url</th>
+                          </tr>
+                          <tr id="prescriptions_1">
+                            <td>
+                              <input type="checkbox" class="prescriptions row_checker" name="prescriptions_1" value="1">
+                            </td>
+                            <td>
+                              <textarea name="prescriptions[0][name]" rows="2" class="name form-control"></textarea>
+                              <div class="error text-danger"></div>
+                            </td>
+                            <td>
+                              <textarea name="prescriptions[0][url]" rows="2" class="url form-control"></textarea>
+                              <div class="error text-danger"></div>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <div class="btn-group">
+                        <button type="button" class="btn btn-primary add"><span class="glyphicon glyphicon-plus"></span> Добавить</button>
+                        <button type="button" class="btn btn-danger remove"><span class="glyphicon glyphicon-minus"></span> Удалить</button>
+                        <button type="button" class="btn btn-danger remove_selected"><span class="glyphicon glyphicon-remove"></span> Удалить выделенные</button>
+                      </div>
+                      <hr>
+                    </div>
+                    <h4>Отчёты об исполнении предписаний органов, осуществляющих государственный контроль (надзор) в сфере образования </h4>
+                    <div class="form_row col-md-12">
+                      <table class="table" id="prescription_otchets">
+                        <tbody>
+                          <tr>
+                            <th>&nbsp;&nbsp;</th>
+                            <th>Наименование документа</th>
+                            <th>Url</th>
+                          </tr>
+                          <tr id="prescription_otchets_1">
+                            <td>
+                              <input type="checkbox" class="prescription_otchets row_checker" name="prescription_otchets_1" value="1">
+                            </td>
+                            <td>
+                              <textarea name="prescription_otchets[0][name]" rows="2" class="name form-control"></textarea>
+                              <div class="error text-danger"></div>
+                            </td>
+                            <td>
+                              <textarea name="prescription_otchets[0][url]" rows="2" class="url form-control"></textarea>
+                              <div class="error text-danger"></div>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <div class="btn-group">
+                        <button type="button" class="btn btn-primary add"><span class="glyphicon glyphicon-plus"></span> Добавить</button>
+                        <button type="button" class="btn btn-danger remove"><span class="glyphicon glyphicon-minus"></span> Удалить</button>
+                        <button type="button" class="btn btn-danger remove_selected"><span class="glyphicon glyphicon-remove"></span> Удалить выделенные</button>
+                      </div>
+                      <hr>
+                    </div>
+                    <h4 class="text-primary"> Поля, отмеченные *, являются обязательными для заполнения </h4>
+                  </form>
+                </div><a class="btn btn-block btn-lg btn-warning" href="#"><i class="fa fa-fw fa-check"></i><b>Сохранить</b></a>
+              </div><a class="btn btn-block btn-lg btn-success" href="#">Образование</a><a class="btn btn-block btn-lg btn-success" href="#">Образовательные стандарты</a><a class="btn btn-primary btn-block btn-lg" href="#">Руководство. Педагогический (научно-педагогический) состав</a><a class="btn btn-primary btn-block btn-lg" href="#">Материально-техническое обеспечение и оснащённость образовательного процесса</a><a class="btn btn-primary btn-block btn-lg" href="#">Стипендии и иные виды материальной поддержки</a><a class="btn btn-primary btn-block btn-lg" href="#">Платные образовательные услуги</a><a class="btn btn-primary btn-block btn-lg" href="#">Финансово-хозяйственная деятельность</a><a class="btn btn-primary btn-block btn-lg" href="#">Вакантные места для приема (перевода)</a>
             </div>
           </div>
         </div>
