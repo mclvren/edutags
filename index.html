@@ -32,7 +32,7 @@
           <form class="needs-validation p-2" novalidate="">
             <button type="submit" class="btn btn-lg btn-warning" contenteditable="true">Скачать</button><button type="submit" class="float-right btn btn-lg btn-danger">Изменить теги</button></form>
           <div class="row">
-            <div class="col-md-14" style=""><a class="btn btn-block btn-lg btn-success mb-2" href="#">Основные сведения</a>
+            <div class="col-md-14" style="" id="dok-btn"><a class="btn btn-block btn-lg btn-success mb-2" href="#" id="sveden-btn">Основные сведения</a>
               <div class="row">
                 <div class="col-md-12 mb-3" id="svedenia">
                   <div class="card">
@@ -93,7 +93,7 @@
                         </table>
                         <div class="btn-group">
                           <button type="button" class="btn add add_founder btn-warning mr-1"><i class="fa fa-fw fa-plus"></i><span class="glyphicon glyphicon-plus"></span> Добавить</button>
-                          <button type="button" class="btn btn-danger remove mr-1"><i class="fa fa-fw fa-minus"></i><i class="fa fa-fw fa-minus"></i> Удалить</button>
+                          <button type="button" class="btn btn-danger remove mr-1"><i class="fa fa-fw fa-minus"></i> Удалить</button>
                           <button type="button" class="btn btn-danger remove_selected_founders"><i class="fa fa-fw fa-minus-square"></i><span class="glyphicon glyphicon-remove"></span> Удалить выделенные</button>
                         </div>
                         <hr>
@@ -102,7 +102,7 @@
                     </div>
                   </div><a class="btn btn-block btn-lg btn-warning" href="#"><i class="fa fa-fw fa-check"></i><b>Сохранить</b></a>
                 </div>
-              </div><a class="btn btn-primary btn-block btn-lg text-center mb-2" href="#"><i class="fa fa-fw fa-plus"></i>Структура и органы управления образовательной организацией</a>
+              </div><a class="btn btn-primary btn-block btn-lg text-center mb-2" href="#" id="struk-btn"><i class="fa fa-fw fa-plus"></i>Структура и органы управления образовательной организацией</a>
               <div class="card mb-3" id="struktura">
                 <div class="card-header">Добавление страницы</div>
                 <div class="card-body">
@@ -203,12 +203,12 @@
                     <h4 class="text-primary"> Поля, отмеченные *, являются обязательными для заполнения </h4>
                   </form>
                 </div><a class="btn btn-block btn-lg btn-warning" href="#"><i class="fa fa-fw fa-check"></i><b>Сохранить</b></a>
-              </div><a class="btn btn-primary btn-block btn-lg mb-2" href="#">Документы</a>
+              </div><a class="btn btn-primary btn-block btn-lg mb-2" href="#" id="doc-btn"><i class="fa fa-fw fa-plus"></i>Документы</a>
               <div class="card mb-3" id="documenty">
                 <div class="card-header"> Добавление страницы </div>
                 <div class="card-body">
                   <form id="data_form" class="AVAST_PAM_nonloginform">
-                    <input name="base[draft]" type="hidden" id="draft" value="">
+                    <input name="base[draft]" type="hidden" id="draft" value="" style="">
                     <h4>Устав образовательной организации</h4>
                     <div class="form_row col-md-12">
                       <table class="table" id="ustavs">
@@ -794,6 +794,15 @@
     $("#svedenia").addClass("d-none");
     $("#struktura").addClass("d-none");
     $("#documenty").addClass("d-none");
+    $("#sveden-btn").click(function() {
+      $("#svedenia").toggleClass("d-none");
+    });
+    $("#struk-btn").click(function() {
+      $("#struktura").toggleClass("d-none");
+    });
+    $("#doc-btn").click(function() {
+      $("#documenty").toggleClass("d-none");
+    });
   </script>
   <pingendo onclick="window.open('https://pingendo.com/', '_blank')" style="cursor:pointer;position: fixed;bottom: 20px;right:20px;padding:4px;background-color: #00b0eb;border-radius: 8px; width:220px;display:flex;flex-direction:row;align-items:center;justify-content:center;font-size:14px;color:white">Made with Pingendo Free&nbsp;&nbsp;<img src="https://pingendo.com/site-assets/Pingendo_logo_big.png" class="d-block" alt="Pingendo logo" height="16"></pingendo>
 </body>
