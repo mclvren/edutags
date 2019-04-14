@@ -32,7 +32,78 @@
           <form class="needs-validation p-2" novalidate="">
             <button type="submit" class="btn btn-lg btn-warning" contenteditable="true">Скачать</button><button type="submit" class="float-right btn btn-lg btn-danger">Изменить теги</button></form>
           <div class="row">
-            <div class="col-md-12"><a class="btn btn-block btn-lg btn-success" href="#">Основные сведения</a><a class="btn btn-primary btn-block btn-lg text-center" href="#">Структура и органы управления образовательной организацией</a><a class="btn btn-primary btn-block btn-lg" href="#">Документы</a><a class="btn btn-block btn-lg btn-success" href="#">Образование</a><a class="btn btn-block btn-lg btn-success" href="#">Образовательные стандарты</a><a class="btn btn-primary btn-block btn-lg" href="#">Руководство. Педагогический (научно-педагогический) состав</a><a class="btn btn-primary btn-block btn-lg" href="#">Материально-техническое обеспечение и оснащённость образовательного процесса</a><a class="btn btn-primary btn-block btn-lg" href="#">Стипендии и иные виды материальной поддержки</a><a class="btn btn-primary btn-block btn-lg" href="#">Платные образовательные услуги</a><a class="btn btn-primary btn-block btn-lg" href="#">Финансово-хозяйственная деятельность</a><a class="btn btn-primary btn-block btn-lg" href="#">Вакантные места для приема (перевода)</a></div>
+            <div class="col-md-12"><a class="btn btn-block btn-lg btn-success" href="#">Основные сведения</a>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="card">
+                    <div class="card-header"> Редактирование страницы</div>
+                    <div class="card-body">
+                      <form class="">
+                        <div class="form-group"> <label>Дата создания образовательной организации *</label> <input type="text" class="form-control"> </div>
+                        <div class="form-group"> <label>Адрес местонахождения образовательной организации *</label> <input type="text" class="form-control"> </div>
+                        <div class="form-group"> <label>Режим, график работы *</label> <textarea class="form-control"></textarea></div>
+                        <div class="form-group"> <label contenteditable="true">Контактные телефоны *</label> <textarea class="form-control"></textarea></div>
+                        <div class="form-group"> <label contenteditable="true">Факсы *</label> <textarea class="form-control"></textarea></div>
+                        <div class="form-group"> <label>Адреса электронной почты *</label> <textarea class="form-control"></textarea></div>
+                      </form>
+                      <h3 class="">Поля, отмеченные *, являются обязательными для заполнения </h3>
+                      <!-- Cut -->
+                      <div class="form_row col-md-12">
+                        <table class="table" id="founders">
+                          <tbody>
+                            <tr>
+                              <th>&nbsp;&nbsp;</th>
+                              <th>Наименование учредителя</th>
+                              <th>Фамилия, имя, отчество руководителя учредителя (ей) образовательной организации (*)</th>
+                              <th>Адрес местонахождения учредителя(ей)</th>
+                              <th>Контактные телефоны (*)</th>
+                              <th>Адрес электронной почты (*)</th>
+                              <th>Адрес сайта учредителя(ей) в сети «Интернет»</th>
+                            </tr>
+                            <tr id="founder_1">
+                              <td>
+                                <input type="checkbox" class="founder row_checker" name="founder_1" value="1">
+                              </td>
+                              <td>
+                                <textarea name="founders[0][name_uchred]" rows="5" class="name_uchred form-control"></textarea>
+                                <div class="error text-danger"></div>
+                              </td>
+                              <td>
+                                <textarea name="founders[0][fullname_uchred]" rows="5" class="fullname_uchred form-control"></textarea>
+                                <div class="error text-danger"></div>
+                              </td>
+                              <td>
+                                <textarea name="founders[0][address_uchred]" rows="5" class="address_uchred form-control" placeholder="Не заполняется для учредителей – физических лиц"></textarea>
+                                <div class="error text-danger"></div>
+                              </td>
+                              <td>
+                                <textarea name="founders[0][tel_uchred]" rows="5" class="tel_uchred form-control"></textarea>
+                                <div class="error text-danger"></div>
+                              </td>
+                              <td>
+                                <textarea name="founders[0][mail_uchred]" rows="5" class="mail_uchred form-control"></textarea>
+                                <div class="error text-danger"></div>
+                              </td>
+                              <td>
+                                <textarea name="founders[0][website_uchred]" rows="5" class="website_uchred form-control" placeholder="Не заполняется для учредителей – физических лиц"></textarea>
+                                <div class="error text-danger"></div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        <div class="btn-group">
+                          <button type="button" class="btn add add_founder btn-warning mr-1"><i class="fa fa-fw fa-plus"></i><span class="glyphicon glyphicon-plus"></span> Добавить</button>
+                          <button type="button" class="btn btn-danger remove mr-1"><i class="fa fa-fw fa-minus"></i><span class="glyphicon glyphicon-minus"></span> Удалить</button>
+                          <button type="button" class="btn btn-danger remove_selected_founders"><i class="fa fa-fw fa-minus-square"></i><span class="glyphicon glyphicon-remove"></span> Удалить выделенные</button>
+                        </div>
+                        <hr>
+                      </div>
+                      <!--Cut-->
+                    </div>
+                  </div>
+                </div>
+              </div><a class="btn btn-primary btn-block btn-lg text-center" href="#">Структура и органы управления образовательной организацией</a><a class="btn btn-primary btn-block btn-lg" href="#">Документы</a><a class="btn btn-block btn-lg btn-success" href="#">Образование</a><a class="btn btn-block btn-lg btn-success" href="#">Образовательные стандарты</a><a class="btn btn-primary btn-block btn-lg" href="#">Руководство. Педагогический (научно-педагогический) состав</a><a class="btn btn-primary btn-block btn-lg" href="#">Материально-техническое обеспечение и оснащённость образовательного процесса</a><a class="btn btn-primary btn-block btn-lg" href="#">Стипендии и иные виды материальной поддержки</a><a class="btn btn-primary btn-block btn-lg" href="#">Платные образовательные услуги</a><a class="btn btn-primary btn-block btn-lg" href="#">Финансово-хозяйственная деятельность</a><a class="btn btn-primary btn-block btn-lg" href="#">Вакантные места для приема (перевода)</a>
+            </div>
           </div>
         </div>
       </div>
@@ -42,7 +113,7 @@
     <div class="container">
       <div class="row">
         <div class="col-md-12 my-4">
-          <p class="mb-1">it@polytech21.ru</p>
+          <p class="mb-1"><a href="mailto://it@polytech21.ru">it@polytech21.ru</a></p>
         </div>
       </div>
     </div>
