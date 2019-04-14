@@ -1424,7 +1424,7 @@
                   </form>
                 </div>
               </div><a class="btn btn-block btn-lg btn-success mb-3" href="#" id="standart-btn">Образовательные стандарты</a>
-              <div class="card mb-3">
+              <div class="card mb-3" id="obrstand">
                 <div class="card-header">Редактировать страницу</div>
                 <div class="card-body">
                   <form id="data_form" class="AVAST_PAM_nonloginform">
@@ -1631,6 +1631,7 @@
     $("#struktura").addClass("d-none");
     $("#documenty").addClass("d-none");
     $("#obr").addClass("d-none");
+    $("#obrstand").addClass("d-none");
     $("#sveden-btn").click(function() {
       $("#svedenia").toggleClass("d-none");
     });
@@ -1642,6 +1643,9 @@
     });
     $("#obr-btn").click(function() {
       $("#obr").toggleClass("d-none");
+    });
+    $("#standart-btn").click(function() {
+      $("#obrstand").toggleClass("d-none");
     });
   </script>
   <pingendo onclick="window.open('https://pingendo.com/', '_blank')" style="cursor:pointer;position: fixed;bottom: 20px;right:20px;padding:4px;background-color: #00b0eb;border-radius: 8px; width:220px;display:flex;flex-direction:row;align-items:center;justify-content:center;font-size:14px;color:white">Made with Pingendo Free&nbsp;&nbsp;<img src="https://pingendo.com/site-assets/Pingendo_logo_big.png" class="d-block" alt="Pingendo logo" height="16"></pingendo>
