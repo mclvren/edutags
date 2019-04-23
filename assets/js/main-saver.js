@@ -1,15 +1,20 @@
-(function($){
-  $.fn.getFormData = function(){
-    var data = {};
-    var dataArray = $(this).serializeArray();
-    for(var i=0;i<dataArray.length;i++){
-      data[dataArray[i].name] = dataArray[i].value;
-    }
-    return data;
-  }
-})(jQuery);
-var mainsource = $("#osn-sveden").getFormData();
 $("#save-btn").click(function() {
-  var file = new File([mainsource], "test.txt", {type: "text/plain;charset=utf-8"});
+    // get all the inputs into an array.
+    var $inputs = $('#osn-sveden :input');
+
+    // not sure if you wanted this, but I thought I'd add it.
+    // get an associative array of just the values.
+    var ms = {};
+    $inputs.each(function() {
+        ms[this.name] = $(this).val();
+    });
+  obr_dat = ms.obr_dat;
+  obr_adr = ms.obr_adr;
+  obr_time = ms.obr_time;
+  obr_phones = ms.obr_phones;
+  obr_fax = ms.obr_fax;
+  obr_email = ms.obr_email;
+  html = "<!DOCTYPE html><html><head><meta http-equiv='Content-Type' content='text/html; charset=UTF-8'><meta http-equiv='X-UA-Compatible' content='IE=edge'><meta name='viewport' content='width=device-width, initial-scale=1'><title>Сведения об образовательной организации</title><script src='./js/jquery.min.js'></script><script src='./js/bootstrap.min.js'></script><link href='./css/style.css' rel='stylesheet'><link href='./css/bootstrap.min.css' rel='stylesheet'><link href='./css/sveden-base.css' rel='stylesheet'><link href='./css/sveden-style.css' rel='stylesheet'></head><body><div id='wrapper' style='display: block;'><div class='container'><div class='header' id='header'><h1 id='organization_name'>Чебоксарский институт (филиал) федерального государственного бюджетного образовательного учреждения высшего образования «Московский политехнический университет»</h1><div class='navbar navbar-default navbar-static-top'><div class='collapse navbar-collapse' id='bs-example-navbar-collapse-1'><ul class='nav navbar-nav'><li class=''> <a href='/'> Главная <span class='sr-only'>(current)</span> </a></li><li class='dropdown'> <a href='#' class='dropdown-toggle' data-toggle='dropdown' role='button' aria-haspopup='true' aria-expanded='false'> Сведения об образовательной организации <span class='caret'></span> </a><ul class='dropdown-menu'><li><a href='common.html'>Основные сведения</a></li><li><a href='struct.html'>Структура и органы управления образовательной организацией</a></li><li><a href='document.html'>Документы</a></li><li><a href='education.html'>Образование</a></li><li><a href='eduStandarts.html'>Образовательные стандарты</a></li><li><a href='employees.html'>Руководство. Педагогический (научно-педагогический) состав</a></li><li><a href='objects.html'>Материально-техническое обеспечение и оснащённость образовательного процесса</a></li><li><a href='grants.html'>Стипендии и иные виды материальной поддержки</a></li><li><a href='paid_edu.html'>Платные образовательные услуги</a></li><li><a href='budget.html'>Финансово-хозяйственная деятельность</a></li><li><a href='vacant.html'>Вакантные места для приема (перевода)</a></li></ul></li></ul><ul class='nav navbar-nav navbar-right'><li itemprop='сopy'> <a href='common-ovz.html' class='accessability'> Версия официального сайта для слабовидящих </a></li></ul></div></div></div><div class='section' id='section'><div class='form-group content' id='content' style='width: 100%'><h2 id='page_content_header'> Основные сведения</h2><div id='page_content'><div><p class='col-md-4 col-sm-6'>Дата создания образовательной организации:</p><p class='col-md-8 col-sm-6' id='reg_date' itemprop='regDate'>"+obr_dat+"</p><div class='clear'></div></div><div><p class='col-md-4 col-sm-6'>Адрес:</p><p class='col-md-8 col-sm-6' id='address' itemprop='address'>"+obr_adr+"</p><div class='clear'></div></div><div><p class='col-md-4 col-sm-6'>График работы образовательной организации:</p><p class='col-md-8 col-sm-6' id='work_time' itemprop='workTime'>"+obr_time+"</p><div class='clear'></div></div><div><p class='col-md-4 col-sm-6'>Контактные телефоны:</p><p class='col-md-8 col-sm-6' id='telephone' itemprop='telephone'>"+obr_phones+"</p><div class='clear'></div></div><div><p class='col-md-4 col-sm-6'>Факс:</p><p class='col-md-8 col-sm-6' id='fax' itemprop='fax'>"+obr_fax+"</p><div class='clear'></div></div><div><p class='col-md-4 col-sm-6'>Адреса электронной почты:</p><p class='col-md-8 col-sm-6' id='email' itemprop='email'>"+obr_email+"</p><div class='clear'></div></div><div><h4>Учредители</h4><table class='table table-striped table-bordered' id='founder'><tr><th style='width: 20%;'>Наименование учредителя</th><th style='width: 15%;'>Фамилия, имя, отчество руководителя учредителя (ей) образовательной организации</th><th style='width: 20%;'>Адрес местонахождения учредителя(ей)</th><th style='width: 15%;'>Контактные телефоны</th><th style='width: 15%;'>Адрес электронной почты</th><th style='width: 15%;'>Адрес сайта учредителя(ей) в сети «Интернет»</th></tr><tr itemprop='uchredLaw'><td itemprop='nameUchred'>Министерство науки и высшего образования Российской Федерации</td><td itemprop='fullnameUchred'>Котюков Михаил Михайлович</td><td itemprop='addressUchred'>Россия, 125993, Москва улица Тверская, дом 11</td><td itemprop='telUchred'>+7 (495) 539 55 19</td><td itemprop='mailUchred'>info@mon.gov.ru</td><td itemprop='websiteUchred'>http://минобрнауки.рф</td></tr></table></div><div><h4>Филиалы</h4><table class='table table-striped table-bordered' id='branch'><tr><th style='width: 35%;'>Наименование филиала</th><th style='width: 35%;'>Адрес местонахождения филиала образовательной организации</th><th style='width: 30%;'>Адрес официального сайта в сети «Интернет» (при наличии)</th></tr><tr itemprop='filInfo'><td colspan='3'>Филиалы отсутствуют</td></tr></table></div></div></div></div></div></div></body></html>"
+  var file = new File([html], "test.html", {type: "text/plain;charset=utf-8"});
   saveAs(file);
 });
