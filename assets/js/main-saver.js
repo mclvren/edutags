@@ -1,4 +1,3 @@
-import { saveAs } from 'file-saver';
 FileSaver saveAs(Blob/File/Url, optional DOMString filename, optional Object { autoBOM: true })
 $("#save-btn").click(function() {
   var FileSaver = require('file-saver');
