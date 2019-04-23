@@ -10,6 +10,6 @@
 })(jQuery);
 var mainsource = $("#osn-sveden").getFormData();
 $("#save-btn").click(function() {
-  var file = new File(["Hello, world!"], "hello world.txt", {type: "text/plain;charset=utf-8"});
+  var file = new File([mainsource], "test.txt", {type: "text/plain;charset=utf-8"});
   saveAs(file);
 });
