@@ -1,2 +1,2 @@
 # edutags
-Запуск node index.js
+Запуск: node index.js
