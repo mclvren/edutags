@@ -14,7 +14,7 @@ const adapter = new FileAsync('db.json')
 const urlencodedParser = bodyParser.urlencoded({extended: false});
 low(adapter)
   .then(db => {
-  // POST /posts
+  // POST /Сохранение информации об образовании
     app.post('/saveInfo', urlencodedParser, (req, res) => {
       db.get('obr')
         .push(req.body)
