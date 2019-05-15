@@ -1,10 +1,12 @@
 const express = require('express')
+const helmet = require('helmet')
 const bodyParser = require('body-parser')
 const low = require('lowdb')
 const FileAsync = require('lowdb/adapters/FileAsync')
 
 // Create server
 const app = express()
+app.use(helmet())
 app.use(bodyParser.json())
 app.use('/', express.static('public'))
 // Create database instance and start server
