@@ -30,23 +30,23 @@
       <div class="row">
         <div class="order-md-1">
           <form class="needs-validation p-2" novalidate="">
-            <button type="submit" class="btn btn-lg btn-warning d-none" contenteditable="true">Скачать</button><button type="submit" class="float-right btn btn-lg btn-danger d-none">Изменить теги</button></form>
+            <button type="submit" class="btn btn-lg btn-warning d-none">Скачать</button><button type="submit" class="float-right btn btn-lg btn-danger d-none">Изменить теги</button></form>
           <div class="row">
             <div class="col-md-14 w-100 col-lg-12" style="" id="dok-btn"><a class="btn btn-block btn-lg btn-success mb-2" href="#" id="sveden-btn">Основные сведения</a>
               <div class="row">
                 <div class="col-md-30 mb-3 col-md-12" id="svedenia">
-                  <div class="card w-100">
+                  <div class="card">
                     <div class="card-header"> Редактирование страницы</div>
                     <div class="card-body">
                       <form class="" id="osn-sveden">
                         <div class="form-group"> <label>Дата создания образовательной организации *</label> <input type="text" class="form-control" name="obr_dat"> </div>
                         <div class="form-group"> <label>Адрес местонахождения образовательной организации *</label> <input type="text" class="form-control" name="obr_adr"> </div>
                         <div class="form-group"> <label>Режим, график работы *</label> <textarea class="form-control" name="obr_time"></textarea></div>
-                        <div class="form-group"> <label contenteditable="true">Контактные телефоны *</label> <textarea class="form-control" name="obr_phones"></textarea></div>
-                        <div class="form-group"> <label contenteditable="true">Факсы *</label> <textarea class="form-control" name="obr_fax"></textarea></div>
+                        <div class="form-group"> <label>Контактные телефоны *</label> <textarea class="form-control" name="obr_phones"></textarea></div>
+                        <div class="form-group"> <label>Факсы *</label> <textarea class="form-control" name="obr_fax"></textarea></div>
                         <div class="form-group"> <label>Адреса электронной почты *</label> <textarea class="form-control" name="obr_email"></textarea></div>
-                      </form>
-                      <h4 class="">Поля, отмеченные *, являются обязательными для заполнения </h4><a class="btn btn-outline-dark btn-block btn-lg mb-3" href="#"><i class="fa fa-plus fa-fw"></i><b class="">Учредители образовательной организации</b></a>
+
+                      <h4 class="">Поля, отмеченные *, являются обязательными для заполнения </h4><a class="btn btn-outline-dark btn-block btn-lg mb-3" href="#" id="founders-btn"><i class="fa fa-plus fa-fw"></i><b class="">Учредители образовательной организации</b></a>
                       <!-- Cut -->
                       <div class="form_row col-md-12">
                         <table class="table" id="founders">
@@ -65,32 +65,33 @@
                                 <input type="checkbox" class="founder row_checker" name="founder_1" value="1" checked="checked" id="obr-uch-check">
                               </td>-->
                               <td>
-                                <textarea name="founders[0][name_uchred]" rows="5" class="name_uchred form-control" placeholder="Не заполняется для учредителей – физических лиц" id="obr-uch-name"></textarea>
+                                <textarea name="founders_1_name_uchred" rows="5" class="name_uchred form-control" placeholder="Не заполняется для учредителей – физических лиц" id="obr-uch-name"></textarea>
                                 <div class="error text-danger"></div>
                               </td>
                               <td>
-                                <textarea name="founders[0][fullname_uchred]" rows="5" class="fullname_uchred form-control" placeholder="Не заполняется для учредителей – физических лиц" id="obr-uch-fullname"></textarea>
+                                <textarea name="founders_1_fullname_uchred" rows="5" class="fullname_uchred form-control" placeholder="Не заполняется для учредителей – физических лиц" id="obr-uch-fullname"></textarea>
                                 <div class="error text-danger"></div>
                               </td>
                               <td>
-                                <textarea name="founders[0][address_uchred]" rows="5" class="address_uchred form-control" placeholder="Не заполняется для учредителей – физических лиц" id="obr-uch-adr"></textarea>
+                                <textarea name="founders_1_address_uchred" rows="5" class="address_uchred form-control" placeholder="Не заполняется для учредителей – физических лиц" id="obr-uch-adr"></textarea>
                                 <div class="error text-danger"></div>
                               </td>
                               <td>
-                                <textarea name="founders[0][tel_uchred]" rows="5" class="tel_uchred form-control" placeholder="Не заполняется для учредителей – физических лиц" id="obr-uch-phones"></textarea>
+                                <textarea name="founders_1_tel_uchred" rows="5" class="tel_uchred form-control" placeholder="Не заполняется для учредителей – физических лиц" id="obr-uch-phones"></textarea>
                                 <div class="error text-danger"></div>
                               </td>
                               <td>
-                                <textarea name="founders[0][mail_uchred]" rows="5" class="mail_uchred form-control" placeholder="Не заполняется для учредителей – физических лиц" id="obr-uch-email"></textarea>
+                                <textarea name="founders_1_mail_uchred" rows="5" class="mail_uchred form-control" placeholder="Не заполняется для учредителей – физических лиц" id="obr-uch-email"></textarea>
                                 <div class="error text-danger"></div>
                               </td>
                               <td>
-                                <textarea name="founders[0][website_uchred]" rows="5" class="website_uchred form-control" placeholder="Не заполняется для учредителей – физических лиц" id="obr-uch-site"></textarea>
+                                <textarea name="founders_1_website_uchred" rows="5" class="website_uchred form-control" placeholder="Не заполняется для учредителей – физических лиц" id="obr-uch-site"></textarea>
                                 <div class="error text-danger"></div>
                               </td>
                             </tr>
                           </tbody>
                         </table>
+
                         <!--<div class="btn-group">
                           <button type="button" class="btn add add_founder btn-warning mr-1"><i class="fa fa-fw fa-plus"></i><span class="glyphicon glyphicon-plus"></span> Добавить</button>
                           <button type="button" class="btn btn-danger remove mr-1"><i class="fa fa-fw fa-minus"></i> Удалить</button>
@@ -99,7 +100,7 @@
                         <hr>
                       </div>
                       <!--Cut-->
-                    </div><a class="btn btn-block btn-lg btn-warning" href="#" id="save-btn"><i class="fa fa-fw fa-check"></i><b>Сохранить</b></a>
+                    </div><button class="btn btn-block btn-lg btn-warning" type="submit" id="save-btn"><i class="fa fa-fw fa-check"></i><b>Сохранить</b></button></form>
                   </div>
                 </div>
               </div>
@@ -802,6 +803,9 @@
        $("#documenty").addClass("d-none");
     $("#struk-btn").click(function() {
       $("#struktura").toggleClass("d-none");
+    });
+    $("#founders-btn").click(function() {
+      $("#founders").toggleClass("d-none");
     });
     $("#doc-btn").click(function() {
       $("#documenty").toggleClass("d-none");

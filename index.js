@@ -6,33 +6,23 @@ const FileAsync = require('lowdb/adapters/FileAsync')
 // Create server
 const app = express()
 app.use(bodyParser.json())
-
+app.use('/', express.static('public'))
 // Create database instance and start server
 const adapter = new FileAsync('db.json')
+const urlencodedParser = bodyParser.urlencoded({extended: false});
 low(adapter)
   .then(db => {
-    // Routes
-    // GET /posts/:id
-    app.get('/posts/:id', (req, res) => {
-      const post = db.get('posts')
-        .find({ id: req.params.id })
-        .value()
-
-      res.send(post)
-    })
-
-    // POST /posts
-    app.post('/posts', (req, res) => {
-      db.get('posts')
+  // POST /posts
+    app.post('/saveInfo', urlencodedParser, (req, res) => {
+      db.get('obr')
         .push(req.body)
         .last()
-        .assign({ id: Date.now().toString() })
         .write()
         .then(post => res.send(post))
     })
 
     // Set db default values
-    return db.defaults({ posts: [] }).write()
+    return db.defaults({ obr: [] }).write()
   })
   .then(() => {
     app.listen(3000, () => console.log('listening on port 3000'))
