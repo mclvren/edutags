@@ -52,7 +52,7 @@ $("#save-btn").click(function() {
     })
         .done(function(data) {
             //$(.result).html(data);
-            console.log(data);
+            alert("Данные успешно сохранены")
         });
 }
 });
