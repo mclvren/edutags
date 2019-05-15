@@ -13,6 +13,7 @@
   "author": "mclvren",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.16.4"
+    "express": "^4.16.4",
+    "lowdb": "^1.0.0"
   }
 }
