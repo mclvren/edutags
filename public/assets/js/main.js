@@ -1,5 +1,34 @@
-$("#save-btn").click(function() {
-  event.preventDefault();
+//Функция отправки
+function sendAjaxForm(result_form, ajax_form, url) {
+    jQuery.ajax({
+        url:     url, //url страницы (action_ajax_form.php)
+        type:     "POST", //метод отправки
+        dataType: "html", //формат данных
+        data: jQuery("#"+ajax_form).serialize(),  // Сеарилизуем объект
+        success: function(response) { //Данные отправлены успешно
+        	//result = jQuery.parseJSON(response);
+        	alert("Сохранено");
+    	},
+    	error: function(response) { // Данные не отправлены
+    		alert("Ошибка!");
+    	}
+ 	});
+}
+//Загрузка данных из БД
+$.getJSON('/load', {}, function(json){  // загрузка JSON данных из БД
+// заполняем DOM элемент данными из JSON объекта
+var $inputs = $('#osn-sveden :input');
+// get an associative array of just the values.
+var ms = {};
+$inputs.each(function() { //
+    ms[this.name] = $(this).val(); // доделать
+    if (json.obr_dat=='') { //
+      $(this).value(json.obr_dat); //
+    }
+});
+});
+//Сохранение основных сведений
+$("#osn-sveden").submit(function() {
     // get all the inputs into an array.
     var $inputs = $('#osn-sveden :input');
     // get an associative array of just the values.
@@ -19,40 +48,8 @@ $("#save-btn").click(function() {
      $(this).attr("placeholder", "");
     });
     if (isNull==false) {
-  obr_dat=ms.obr_dat;
-  obr_adr=ms.obr_adr;
-  obr_time=ms.obr_time;
-  obr_phones=ms.obr_phones;
-  obr_fax=ms.obr_fax;
-  obr_email=ms.obr_email;
-  name_uchred=ms.founders_1_name_uchred;
-  fullname_uchred=ms.founders_1_fullname_uchred;
-  address_uchred=ms.founders_1_address_uchred;
-  tel_uchred=ms.founders_1_tel_uchred;
-  mail_uchred=ms.founders_1_mail_uchred;
-  website_uchred=ms.founders_1_website_uchred;
-  $.ajax({
-        type        : 'POST',
-        url         : '/saveInfo',
-        data        : {
-                        "obr_dat": obr_dat,
-                        "obr_adr": obr_adr,
-                        "obr_phones": obr_phones,
-                        "obr_fax": obr_fax,
-                        "obr_email": obr_email,
-                        "name_uchred": name_uchred,
-                        "fullname_uchred": fullname_uchred,
-                        "address_uchred": address_uchred,
-                        "tel_uchred": tel_uchred,
-                        "mail_uchred": mail_uchred,
-                        "website_uchred": website_uchred
-                      },
-        dataType    : 'application/json',
-        encode      : true,
-    })
-        .done(function(data) {
-            //$(.result).html(data);
-            alert("Данные успешно сохранены")
-        });
+      sendAjaxForm('result_form', 'osn-sveden', '/saveInfo');
+			return false;
 }
+return false;
 });

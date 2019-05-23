@@ -17,14 +17,21 @@ low(adapter)
   // POST /Сохранение информации об образовании
     app.post('/saveInfo', urlencodedParser, (req, res) => {
       db.get('obr')
-        .push(req.body)
-        .last()
+        .find({id: 1})
+        .assign(req.body)
         .write()
         .then(post => res.send(post))
     })
+    // GET /Получение значений из БД
+    app.get('/load', (req, res) => {
+      const resp1 = db.get('obr')
+        .find({id: 1})
+        .value()
+        res.send(resp1)
+    })
 
     // Set db default values
-    return db.defaults({ obr: [] }).write()
+    return db.defaults({ obr: [{"id":1}] }).write()
   })
   .then(() => {
     app.listen(3000, () => console.log('listening on port 3000'))
