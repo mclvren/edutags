@@ -30,23 +30,6 @@ function findAndReplace(object, value, replacevalue) {
     }
   }
 }
-// Замена полей в шаблоне для common
-function FAR(json) {
-  findAndReplace(json, "*organization_name*", values.organization_name);
-  findAndReplace(json, "*obr_dat*", values.obr_dat);
-  findAndReplace(json, "*obr_adr*", values.obr_adr);
-  findAndReplace(json, "*obr_time*", values.obr_time);
-  findAndReplace(json, "*obr_phones*", values.obr_phones);
-  findAndReplace(json, "*obr_fax*", values.obr_fax);
-  findAndReplace(json, "*obr_email*", values.obr_email);
-  findAndReplace(json, "*founders_1_name_uchred*", values.founders_1_name_uchred);
-  findAndReplace(json, "*founders_1_fullname_uchred*", values.founders_1_fullname_uchred);
-  findAndReplace(json, "*founders_1_address_uchred*", values.founders_1_address_uchred);
-  findAndReplace(json, "*founders_1_tel_uchred*", values.founders_1_tel_uchred);
-  findAndReplace(json, "*founders_1_mail_uchred*", values.founders_1_mail_uchred);
-  findAndReplace(json, "*founders_1_website_uchred*", values.founders_1_website_uchred);
-  return json;
-}
 //БД
 low(adapter)
   .then(db => {
@@ -70,6 +53,23 @@ low(adapter)
       var html = fs.readFileSync('info/common.html', {encoding: 'utf8'});
       var json = h.parse(html);
       const values= db.get('obr').find({id: 1}).value()
+      // Замена полей в шаблоне для common
+      function FAR(json) {
+        findAndReplace(json, "*organization_name*", values.organization_name);
+        findAndReplace(json, "*obr_dat*", values.obr_dat);
+        findAndReplace(json, "*obr_adr*", values.obr_adr);
+        findAndReplace(json, "*obr_time*", values.obr_time);
+        findAndReplace(json, "*obr_phones*", values.obr_phones);
+        findAndReplace(json, "*obr_fax*", values.obr_fax);
+        findAndReplace(json, "*obr_email*", values.obr_email);
+        findAndReplace(json, "*founders_1_name_uchred*", values.founders_1_name_uchred);
+        findAndReplace(json, "*founders_1_fullname_uchred*", values.founders_1_fullname_uchred);
+        findAndReplace(json, "*founders_1_address_uchred*", values.founders_1_address_uchred);
+        findAndReplace(json, "*founders_1_tel_uchred*", values.founders_1_tel_uchred);
+        findAndReplace(json, "*founders_1_mail_uchred*", values.founders_1_mail_uchred);
+        findAndReplace(json, "*founders_1_website_uchred*", values.founders_1_website_uchred);
+        return json;
+      }
       common=h.stringify(FAR(json));
       html = fs.readFileSync('info/common-ovz.html', {encoding: 'utf8'})
       json = h.parse(html);
