@@ -1,0 +1,204 @@
+/*general*/
+body {
+    background-color: #FFFFFF;
+}
+#section {
+    margin-top: 15px;
+    margin-bottom: 70px;
+    padding: 0px;
+    background-color: #FFFFFF;
+        border-radius: 0px;
+}
+/*header*/
+#header .container:first-child {
+    background: linear-gradient(to top,
+    #f8f8f8,
+    #f8f8f8    );
+    }
+#header .navbar {
+    margin-bottom: 0;
+    border: 0;
+}
+#header ul.navbar-nav {
+    margin: 0;
+}
+#header .navbar-default {
+    background-color: transparent;
+}
+#header h1 {
+    font-family: Arial, sans-serif;
+    font-size: 30px;
+    text-align: left;
+    color: #777777;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+#header #bs-example-navbar-collapse-1 {
+    background-color: #f8f8f8;
+}
+#header #bs-example-navbar-collapse-1,
+#header #bs-example-navbar-collapse-1 a {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: #337ab7;
+    font-weight: bold;
+}
+#header #bs-example-navbar-collapse-1 a:hover {
+    color: #315899;
+}
+#header ul.dropdown-menu {
+    background-color: #ffffff;
+}
+#header ul.navbar-nav>li.dropdown.open>a {
+    background-color: #f8f8f8;
+}
+#header #bs-example-navbar-collapse-1 ul.dropdown-menu li a {
+    color: #777777;
+}
+#header #bs-example-navbar-collapse-1 ul.dropdown-menu li a:hover {
+    background-color: #f8f8f8;
+    color: #333333;
+}
+/*menu*/
+#nav-menu-list {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+        margin-top: 0px;
+    }
+#nav-menu-list {
+    list-style-type: none;
+    background: linear-gradient(to bottom right, #ffffff, #ffffff);
+    padding: 0px 0px 0px 0px;
+}
+#nav-menu-list > li {
+    padding: 5px;
+    border-bottom: 1px dotted #f8f8f8;
+    margin-bottom: 0px;
+}
+#nav-menu-list > li:last-child {
+    border-bottom: 0;
+}
+#nav-menu-list > li > a {
+    color: #337ab7;
+        text-decoration: none;
+}
+#nav-menu-list > li.active,
+#nav-menu-list > li:hover {
+    background-color: #f8f8f8;
+}
+#nav-menu-list > li.active {
+    font-weight: bold;
+}
+#nav-menu-list > li.active > a,
+#nav-menu-list > li:hover > a {
+    color: #315899;
+}
+#nav-menu [itemprop="Copy"] {
+        margin-bottom: 15px;
+    padding: 0px;
+    background-color: #ffffff;
+    border-radius: 0px;
+}
+#nav-menu [itemprop="Copy"] a {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+        font-weight: bold;
+        color: #337ab7;
+}
+#nav-menu [itemprop="Copy"] a:hover {
+    text-decoration: none;
+    color: #315899;
+}
+/*content*/
+#content,
+    .modal-content {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: #000000;
+    background-color: #ffffff;
+    }
+
+#content h2,
+.modal-content h2 {
+    font-size: 30px;
+    text-align: left;
+    color: #000000;
+    margin-top: 0px;
+    margin-bottom: 10px;
+    border-bottom: 3px solid #000000;
+    padding-bottom: 5px;
+}
+#content h3,
+.modal-content h3 {
+    font-size: 24px;
+    text-align: left;
+    color: #000000;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+#content h4,
+.modal-content h4 {
+    font-size: 18px;
+    text-align: left;
+    color: #000000;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+#content table,
+.modal-content table {
+    font-size: 12px;
+}
+#content table.table-bordered th,
+.modal-content table.table-bordered th {
+    background-color: rgba(0,0,0,0);
+    border: 1px solid #ddd;
+}
+#content table.table-bordered td,
+.modal-content table.table-bordered td {
+    border: 1px solid #ddd;
+}
+#content table.table-striped>tbody>tr:nth-of-type(odd),
+.modal-content table.table-striped>tbody>tr:nth-of-type(odd) {
+    background-color: #f9f9f9;
+}
+#content ul.nav-tabs {
+    border-color: #dddddd;
+}
+#content ul.nav-tabs > li > a {
+    color: #337ab7;
+    padding-left: 6px;
+    padding-right: 5px;
+}
+#content ul.nav-tabs > li > a:hover {
+    background-color: #dddddd;
+}
+#content ul.nav-tabs > li.active > a {
+    border-left-color: #dddddd;
+    border-right-color: #dddddd;
+    border-top-color: #dddddd;
+    border-bottom-color: transparent;
+}
+#content .btn-default,
+.modal-content .btn-default {
+    color: #333333;
+    background-color: #ffffff;
+    border-color: #cccccc;
+}
+#content .btn-default:hover,
+.modal-content .btn-default:hover {
+    color: #333333;
+    background-color: #e6e6e6;
+    border-color: #adadad;
+}
+/*footer*/
+#footer .container:first-child {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    background: linear-gradient(to top,
+    #f8f8f8,
+    #f8f8f8    );
+    color: #777777;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    }

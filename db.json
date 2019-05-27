@@ -1,0 +1,20 @@
+{
+  "obr": [
+    {
+      "id": 1,
+      "obr_dat": "123",
+      "obr_adr": "12",
+      "obr_time": "1312",
+      "obr_phones": "123",
+      "obr_fax": "123",
+      "obr_email": "1231",
+      "founders_1_name_uchred": "123",
+      "founders_1_fullname_uchred": "123",
+      "founders_1_address_uchred": "123",
+      "founders_1_tel_uchred": "132",
+      "founders_1_mail_uchred": "312",
+      "founders_1_website_uchred": "123",
+      "organization_name": "123"
+    }
+  ]
+}
