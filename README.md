@@ -1,3 +1,4 @@
 # edutags
 Генератор тегов
-http://ru.ko.tl:3000
+
+Test: http://ru.ko.tl:3000
