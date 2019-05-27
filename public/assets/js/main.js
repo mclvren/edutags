@@ -51,12 +51,15 @@ function not_danger(inputs) {
 }
 //Сохранение основных сведений
 $("#osn-sveden").submit(function() {
+    result = confirm("Данные будут перезаписаны!");
+    if (result) {
     var $inputs = $('#osn-sveden :input');
     check_input($inputs);
     not_danger($inputs);
     if (isNull==false) {
       sendAjaxForm('result_form', 'osn-sveden', '/saveInfo');
 			return false;
+}
 }
 return false;
 });

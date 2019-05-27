@@ -14,11 +14,15 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.16.4",
+    "express-easy-zip": "^1.1.4",
     "helmet": "^3.18.0",
+    "himalaya": "^1.1.0",
     "lowdb": "^1.0.0"
   },
   "nodemonConfig": {
-    "ignore": ["db.json"],
+    "ignore": [
+      "db.json"
+    ],
     "delay": "2500"
   }
 }

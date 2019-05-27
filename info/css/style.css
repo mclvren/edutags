@@ -1,0 +1,155 @@
+body {
+}
+a,
+.table-hove tr,
+accordion .list-group,
+.table-list tbody .tr,
+.big-grid tr {
+    cursor: pointer;
+}
+accordion .list-group {
+    margin-bottom: 10px !important;
+}
+accordion .list-group:last-child {
+    margin-bottom: 0px !important;
+}
+accordion accordion .panel-group {
+    margin-bottom: 0px !important;
+}
+.logo_img {
+    max-height: 240px;
+    max-width: 700px;
+}
+
+.vuz_name {
+    color: #777;
+}
+
+.bg-text {
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    color: #333;
+    display: block;
+    font-size: 13px;
+    line-height: 1.42857;
+    margin: 0 0 10px;
+    padding: 9.5px;
+    word-wrap: break-word;
+}
+
+.field-img {
+    max-width: 680px;
+}
+
+.navbar-nav > li .input-group {
+    padding-bottom: 8px;
+    padding-top: 8px;
+}
+
+.contact-img {
+    width: 100%;
+}
+
+fieldset {
+    margin-bottom: 15px !important;
+}
+
+blockquote {
+    font-size: 14px !important;
+}
+
+ span.bg-danger,
+ span.bg-warning,
+ span.bg-info {
+     padding: 5px;
+ }
+
+ td span.bg-danger {
+     background-color: #f2dede;
+ }
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+.text {
+    -moz-transform: rotate(270deg); /* Для Firefox */
+    -ms-transform: rotate(270deg); /* Для IE */
+    -webkit-transform: rotate(270deg); /* Для Safari, Chrome, iOS */
+    -o-transform: rotate(270deg); /* Для Opera */
+    transform: rotate(270deg);
+}
+
+.sveden_note_panel {
+    position: fixed;
+    height: 143px;
+    z-index: 1100;
+    cursor: pointer;
+}
+.sveden_note_panel_info {
+    position: relative;
+    width: 530px;
+    padding: 10px;
+    margin: 0px;
+    z-index: 100;
+    float: left;
+}
+.sveden_note_hide_btn {
+    position: relative;
+    width: 20px;
+    background-color:#ff6600 !important;
+    height: 100%;
+    top: 5px;
+    z-index: 101;
+    border-bottom-right-radius: 4px;
+    border-top-right-radius: 6px;
+    float: left;
+    padding-top: 60px;
+    padding-left:2px;
+}
+
+.sveden_note_hide_btn span {
+    color: white;
+}
+.sveden_note_hide_btn:hover {
+    background-color: #999999;
+}
+
+.navbar-collapse::-webkit-scrollbar {
+    width: 20px;
+}
+.navbar-collapse::-webkit-scrollbar-track {
+    background-color: lightgray;
+}
+.navbar-collapse::-webkit-scrollbar-thumb {
+    background-color: lightblue;
+}
+
+/*education*/
+.actual_date_count_students {
+    font-size: 10pt;
+    color: grey;
+}
+
+#content {
+    height: 100%;
+    float: left;
+}
+
+.clear {
+    clear: both;
+}
+#footer {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}
+#page_content p, #page_content td {
+    white-space: pre-line;
+}
+.row ul li {
+    list-style-type: none;
+}
