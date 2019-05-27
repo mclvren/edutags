@@ -1,3 +1,5 @@
+//Gloval
+var isNull=false;
 //Функция отправки
 function sendAjaxForm(result_form, ajax_form, url) {
     jQuery.ajax({
@@ -17,39 +19,51 @@ function sendAjaxForm(result_form, ajax_form, url) {
 //Загрузка данных из БД
 $.getJSON('/load', {}, function(json){  // загрузка JSON данных из БД
 // заполняем DOM элемент данными из JSON объекта
+// поля в массив.
 var $inputs = $('#osn-sveden :input');
-// get an associative array of just the values.
-var ms = {};
-$inputs.each(function() { //
-    ms[this.name] = $(this).val(); // доделать
-    if (json.obr_dat=='') { //
-      $(this).value(json.obr_dat); //
-    }
+// преобразуем JSON в массив
+json_data = JSON.parse(JSON.stringify(json));
+// выводим данные
+$inputs.each(function() {
+    input_name = [this.name];
+    $(this).val(json_data[input_name]);
 });
 });
+// Функция проверки полей на заполненность
+function check_input(inputs) {
+  var ms = {};
+  inputs.each(function() {
+      ms[this.name] = $(this).val();
+      if ($(this).val()=='') {
+        isNull=true;
+        $(this).addClass("is-invalid text-danger");
+        $(this).attr("placeholder", "Поле не заполнено!");
+        $("html,body").animate({scrollTop: $(this).offset().top}, 1000);
+      }
+  });
+}
+// Функция возврата фокуса
+function not_danger(inputs) {
+  inputs.focus(function(event) {
+   $(this).removeClass("is-invalid text-danger");
+   $(this).attr("placeholder", "");
+  });
+}
 //Сохранение основных сведений
 $("#osn-sveden").submit(function() {
-    // get all the inputs into an array.
     var $inputs = $('#osn-sveden :input');
-    // get an associative array of just the values.
-    var ms = {};
-    var isNull=false;
-    $inputs.each(function() {
-        ms[this.name] = $(this).val();
-        if ($(this).val()=='') {
-          isNull=true;
-          $(this).addClass("is-invalid text-danger");
-          $(this).attr("placeholder", "Поле не заполнено!");
-          //$(this).focus();
-        }
-    });
-    $('#osn-sveden :input').focus(function(event) {
-     $(this).removeClass("is-invalid text-danger");
-     $(this).attr("placeholder", "");
-    });
+    check_input($inputs);
+    not_danger($inputs);
     if (isNull==false) {
       sendAjaxForm('result_form', 'osn-sveden', '/saveInfo');
 			return false;
 }
+return false;
+});
+//Скачивание архива
+$("#saveInfo_btn").click(function() {
+    result = confirm("Изменения сохранены?");
+    if (result) window.open("/saveInfo_zip");
+    else $("#save-btn").focus();
 return false;
 });
