@@ -91,6 +91,9 @@ low(adapter)
               { path: path.join(__dirname, '/info/'), name: '/' }    //or a folder
           ],
           filename: 'common.zip'
+      })
+      .catch(function(err){
+      	console.log(err);	//if zip failed
       });
 });
     // Set db default values
