@@ -93,7 +93,7 @@ low(adapter)
           filename: 'common.zip'
       })
       .catch(function(err){
-      	console.log(err);	//if zip failed
+      	res.send(err);	//if zip failed
       });
 });
     // Set db default values
