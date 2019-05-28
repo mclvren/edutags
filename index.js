@@ -10,7 +10,7 @@ const h = require('himalaya');
 // Create server
 const app = express()
 app.use(helmet())
-app.use(zip());
+app.use(zip())
 app.use(bodyParser.json())
 app.use('/', express.static('public'))
 // Create database instance and start server
@@ -25,7 +25,7 @@ function findAndReplace(object, value, replacevalue) {
       }
       if (object[x] == value) {
         object["content"] = replacevalue;
-        // break; // uncomment to stop after first replacement
+         break; // uncomment to stop after first replacement
       }
     }
   }
@@ -49,7 +49,7 @@ low(adapter)
         res.send(resp1)
     })
     //Освновные сведения (скачать)
-    app.use('/saveInfo_zip', function(req, res){
+    app.get('/saveInfo_zip', function(req, res){
       var html = fs.readFileSync('info/common.html', {encoding: 'utf8'});
       var json = h.parse(html);
       const values= db.get('obr').find({id: 1}).value()
