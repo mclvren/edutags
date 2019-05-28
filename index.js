@@ -88,7 +88,8 @@ low(adapter)
                    comment: 'common_ovz',
                    date: new Date(),
                    type: 'file' },
-              { path: path.join(__dirname, '/info/'), name: '/' }    //or a folder
+              { path: path.join(__dirname, '/info/css'), name: '/css' },
+              { path: path.join(__dirname, '/info/js'), name: '/js' }
           ],
           filename: 'common.zip'
       })
@@ -100,5 +101,8 @@ low(adapter)
     return db.defaults({ obr: [{"id":1}] }).write()
   })
   .then(() => {
-    app.listen(3000, () => console.log('listening on port 3000'))
+    app.listen(3000, () => console.log('listening on port 3000'));
+    exports.closeServer = function(){
+      app.close();
+    };
   })
