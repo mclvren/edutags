@@ -4416,11 +4416,11 @@ textarea.input-group-sm > .input-group-btn > .btn {
 .navbar-toggle .icon-bar + .icon-bar {
   margin-top: 4px;
 }
-/*@media (min-width: 768px) {
+@media (min-width: 768px) {
   .navbar-toggle {
     display: none;
   }
-}*/
+}
 .navbar-nav {
   margin: 7.5px -15px;
 }
@@ -4429,7 +4429,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
   padding-bottom: 10px;
   line-height: 20px;
 }
-@media (max-width: 767px) {
+/*@media (max-width: 767px) {
   .navbar-nav .open .dropdown-menu {
     position: static;
     float: none;
@@ -4451,7 +4451,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
   .navbar-nav .open .dropdown-menu > li > a:hover {
     background-image: none;
   }
-}
+}*/
 @media (min-width: 768px) {
   .navbar-nav {
     float: left;
