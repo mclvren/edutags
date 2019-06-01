@@ -71,9 +71,9 @@ low(adapter)
         return json;
       }
       common=h.stringify(FAR(json));
-      html = fs.readFileSync('info/common-ovz.html', {encoding: 'utf8'})
-      json = h.parse(html);
-      common_ovz=h.stringify(FAR(json));
+//      html = fs.readFileSync('info/common-ovz.html', {encoding: 'utf8'})
+//      json = h.parse(html);
+//      common_ovz=h.stringify(FAR(json));
       res.zip({
           files: [
               { content: common,
@@ -82,13 +82,14 @@ low(adapter)
                 comment: 'common',
                    date: new Date(),
                    type: 'file' },
-              { content: common_ovz,
-                   name: 'common-ovz.php',
-                   mode: 0755,
-                   comment: 'common_ovz',
-                   date: new Date(),
-                   type: 'file' },
+//              { content: common_ovz,
+//                   name: 'common-ovz.php',
+//                   mode: 0755,
+//                   comment: 'common_ovz',
+//                   date: new Date(),
+//                   type: 'file' },
               { path: path.join(__dirname, '/info/css'), name: '/css' },
+              { path: path.join(__dirname, '/info/fonts'), name: '/fonts' },
               { path: path.join(__dirname, '/info/js'), name: '/js' }
           ],
           filename: 'common.zip'
