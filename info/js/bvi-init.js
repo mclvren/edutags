@@ -6,7 +6,7 @@ jQuery(document).ready(function($){
             "bvi_font_size":16,
             "bvi_letter_spacing":"normal",
             "bvi_line_height":"normal",
-            "bvi_images":true,
+            "bvi_images":false,
             "bvi_reload":false,
             "bvi_fixed":true,
             "bvi_voice":true,
