@@ -235,9 +235,9 @@ th {
   h3 {
     page-break-after: avoid;
   }
-  .navbar {
+  /*.navbar {
     display: none;
-  }
+  }*/
   .btn > .caret,
   .dropup > .btn > .caret {
     border-top-color: #000 !important;
