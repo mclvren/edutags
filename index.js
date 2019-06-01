@@ -77,13 +77,13 @@ low(adapter)
       res.zip({
           files: [
               { content: common,
-                   name: 'common.html',
+                   name: 'index.php',
                    mode: 0755,
                 comment: 'common',
                    date: new Date(),
                    type: 'file' },
               { content: common_ovz,
-                   name: 'common-ovz.html',
+                   name: 'common-ovz.php',
                    mode: 0755,
                    comment: 'common_ovz',
                    date: new Date(),
