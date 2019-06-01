@@ -103,7 +103,7 @@ low(adapter)
     return db.defaults({ obr: [{"id":1}] }).write()
   })
   .then(() => {
-    app.listen(PORT, () => console.log('listening on port ${ PORT }'));
+    app.listen(PORT, () => console.log('listening on port '+PORT));
     exports.closeServer = function(){
       app.close();
     };
