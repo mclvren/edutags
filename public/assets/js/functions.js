@@ -1,5 +1,5 @@
 function rowCheckerChangeHandler(){
-    $('body').delegate('.row_checker', 'change', function(){
+    $('#struktura').delegate('.row_checker', 'change', function(){
         var rowId = $(this).attr('name');
         if ($(this).is(':checked')){
             $('#' + rowId).addClass('bg-danger');
