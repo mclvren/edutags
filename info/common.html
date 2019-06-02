@@ -1,36 +1,54 @@
 <!DOCTYPE html>
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Сведения об образовательной организации</title><script src="./js/jquery.min.js"></script><script src="./js/bootstrap.min.js"></script><link href="./css/style.css" rel="stylesheet"><link href="./css/bootstrap.min.css" rel="stylesheet"><link href="./css/sveden-base.css" rel="stylesheet"><link href="./css/sveden-style.css" rel="stylesheet"></head><body>
-        <div id="wrapper" style="display: block;">
+<html lang="ru">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Сведения об образовательной организации</title>
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+  <script src="./js/bootstrap.min.js"></script>
+  <script src="./js/responsivevoice.min.js"></script>
+  <script src="./js/js.cookie.js"></script>
+  <script src="./js/bvi.min.js"></script>
+  <script src="./js/bvi-init.js"></script>
+  <link href="./css/style.css" rel="stylesheet">
+  <link href="./css/bootstrap.min.css" rel="stylesheet">
+  <link href="./css/sveden-base.css" rel="stylesheet">
+  <link href="./css/sveden-style.css" rel="stylesheet">
+  <link rel="stylesheet" href="./css/bvi.min.css">
+  <link rel="stylesheet" href="./css/bvi-font.min.css">
+</head><body>
+        <div id="wrapper" class="bvi-show" style="display: block;">
 
-            <div class="container">
+            <div class="container" style="width: 95%;">
                 <div class="header" id="header">
                     <h1 id="organization_name">*organization_name*</h1>
                     <div class="navbar navbar-default navbar-static-top">
-                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <div class="navbar" id="bs-example-navbar-collapse-1">
                             <ul class="nav navbar-nav"><li class="">
-                                    <a href="/">
+                                    <a href="/" class="bvi-voice">
                                         Главная <span class="sr-only">(current)</span>
                                     </a>
                                 </li>
                                 <li class="dropdown">
-                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                    <a href="#" class="dropdown-toggle bvi-voice" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" >
                                         Сведения об образовательной организации <span class="caret"></span>
                                     </a>
-                                    <ul class="dropdown-menu"><li><a href="common.html">Основные сведения</a></li>
-                                        <li><a href="struct.html">Структура и органы управления образовательной организацией</a></li>
-                                        <li><a href="document.html">Документы</a></li>
-                                        <li><a href="education.html">Образование</a></li>
-                                        <li><a href="eduStandarts.html">Образовательные стандарты</a></li>
-                                        <li><a href="employees.html">Руководство. Педагогический (научно-педагогический) состав</a></li>
-                                        <li><a href="objects.html">Материально-техническое обеспечение и оснащённость образовательного процесса</a></li>
-                                        <li><a href="grants.html">Стипендии и иные виды материальной поддержки</a></li>
-                                        <li><a href="paid_edu.html">Платные образовательные услуги</a></li>
-                                        <li><a href="budget.html">Финансово-хозяйственная деятельность</a></li>
-                                        <li><a href="vacant.html">Вакантные места для приема (перевода)</a></li>
+                                    <ul class="dropdown-menu"><li><a href="common.html" class="bvi-voice">Основные сведения</a></li>
+                                        <li><a href="struct.html" class="bvi-voice">Структура и органы управления образовательной организацией</a></li>
+                                        <li><a href="document.html" class="bvi-voice">Документы</a></li>
+                                        <li><a href="education.html" class="bvi-voice">Образование</a></li>
+                                        <li><a href="eduStandarts.html" class="bvi-voice">Образовательные стандарты</a></li>
+                                        <li><a href="employees.html" class="bvi-voice">Руководство. Педагогический (научно-педагогический) состав</a></li>
+                                        <li><a href="objects.html" class="bvi-voice">Материально-техническое обеспечение и оснащённость образовательного процесса</a></li>
+                                        <li><a href="grants.html" class="bvi-voice">Стипендии и иные виды материальной поддержки</a></li>
+                                        <li><a href="paid_edu.html" class="bvi-voice">Платные образовательные услуги</a></li>
+                                        <li><a href="budget.html" class="bvi-voice">Финансово-хозяйственная деятельность</a></li>
+                                        <li><a href="vacant.html" class="bvi-voice">Вакантные места для приема (перевода)</a></li>
                                     </ul></li>
                             </ul><ul class="nav navbar-nav navbar-right"><li itemprop="сopy">
-                                    <a href="common-ovz.php" class="accessability" itemprop='copy'>
-                                        Версия официального сайта для слабовидящих
+                                    <a href="#" class="bvi-open bvi-voice" title="Версия сайта для слабовидящих" itemprop='copy'>
+                                      <i class="bvi-icon bvi-eye bvi-x"></i>  Версия официального сайта для слабовидящих
                                     </a>
                                 </li>
                             </ul></div>
@@ -39,55 +57,55 @@
                 <div class="section" id="section">
 
                     <div class="form-group content" id="content" style="width: 100%">
-                        <h2 id="page_content_header">
+                        <h2 id="page_content_header" class="bvi-voice">
                             Основные сведения
                         </h2>
                         <div id="page_content">
                             <div>
-                                <p class="col-md-4 col-sm-6">Дата создания образовательной организации:</p>
-                                <p class="col-md-8 col-sm-6" id="reg_date" itemprop="regDate">*obr_dat*</p>
+                                <p class="col-md-4 col-sm-6 bvi-voice" >Дата создания образовательной организации:</p>
+                                <p class="col-md-8 col-sm-6 bvi-voice" id="reg_date" itemprop="regDate">*obr_dat*</p>
                                 <div class="clear"></div>
                             </div>
                             <div>
-                                <p class="col-md-4 col-sm-6">Адрес:</p>
-                                <p class="col-md-8 col-sm-6" id="address" itemprop="address">*obr_adr*</p>
+                                <p class="col-md-4 col-sm-6 bvi-voice">Адрес:</p>
+                                <p class="col-md-8 col-sm-6 bvi-voice" id="address" itemprop="address">*obr_adr*</p>
                                 <div class="clear"></div>
                             </div>
                             <div>
-                                <p class="col-md-4 col-sm-6">График работы образовательной организации:</p>
-                                <p class="col-md-8 col-sm-6" id="work_time" itemprop="workTime">*obr_time*</p>
+                                <p class="col-md-4 col-sm-6 bvi-voice">График работы образовательной организации:</p>
+                                <p class="col-md-8 col-sm-6 bvi-voice" id="work_time" itemprop="workTime">*obr_time*</p>
                                 <div class="clear"></div>
                             </div>
                             <div>
-                                <p class="col-md-4 col-sm-6">Контактные телефоны:</p>
-                                <p class="col-md-8 col-sm-6" id="telephone" itemprop="telephone">*obr_phones*</p>
+                                <p class="col-md-4 col-sm-6 bvi-voice">Контактные телефоны:</p>
+                                <p class="col-md-8 col-sm-6 bvi-voice" id="telephone" itemprop="telephone">*obr_phones*</p>
                                 <div class="clear"></div>
                             </div>
                             <div>
-                                <p class="col-md-4 col-sm-6">Факс:</p>
-                                <p class="col-md-8 col-sm-6" id="fax" itemprop="fax">*obr_fax*</p>
+                                <p class="col-md-4 col-sm-6 bvi-voice">Факс:</p>
+                                <p class="col-md-8 col-sm-6 bvi-voice" id="fax" itemprop="fax">*obr_fax*</p>
                                 <div class="clear"></div>
                             </div>
                             <div>
-                                <p class="col-md-4 col-sm-6">Адреса электронной почты:</p>
-                                <p class="col-md-8 col-sm-6" id="email" itemprop="email">*obr_email*</p>
+                                <p class="col-md-4 col-sm-6 bvi-voice">Адреса электронной почты:</p>
+                                <p class="col-md-8 col-sm-6 bvi-voice" id="email" itemprop="email">*obr_email*</p>
                                 <div class="clear"></div>
                             </div>
                             <div>
                                 <h4>Учредители</h4>
-                                <table class="table table-striped table-bordered" id="founder"><tr><th style="width: 20%;">Наименование учредителя</th>
-                                        <th style="width: 15%;">Фамилия, имя, отчество руководителя учредителя (ей) образовательной организации</th>
-                                        <th style="width: 20%;">Адрес местонахождения учредителя(ей)</th>
-                                        <th style="width: 15%;">Контактные телефоны</th>
-                                        <th style="width: 15%;">Адрес электронной почты</th>
-                                        <th style="width: 15%;">Адрес сайта учредителя(ей) в сети «Интернет»</th>
-                                    </tr><tr itemprop="uchredLaw"><td itemprop="nameUchred">*founders_1_name_uchred*</td><td itemprop="fullnameUchred">*founders_1_fullname_uchred*</td><td itemprop="addressUchred">*founders_1_address_uchred*</td><td itemprop="telUchred">*founders_1_tel_uchred*</td><td itemprop="mailUchred">*founders_1_mail_uchred*</td><td itemprop="websiteUchred">*founders_1_website_uchred*</td></tr></table></div>
+                                <table class="table table-striped table-bordered" id="founder"><tr><th class="bvi-voice" style="width: 20%;">Наименование учредителя</th>
+                                        <th class="bvi-voice" style="width: 15%;">Фамилия, имя, отчество руководителя учредителя (ей) образовательной организации</th>
+                                        <th class="bvi-voice" style="width: 20%;">Адрес местонахождения учредителя(ей)</th>
+                                        <th class="bvi-voice" style="width: 15%;">Контактные телефоны</th>
+                                        <th class="bvi-voice" style="width: 15%;">Адрес электронной почты</th>
+                                        <th class="bvi-voice" style="width: 15%;">Адрес сайта учредителя(ей) в сети «Интернет»</th>
+                                    </tr><tr itemprop="uchredLaw"><td  class="bvi-voice" itemprop="nameUchred">*founders_1_name_uchred*</td><td class="bvi-voice" itemprop="fullnameUchred">*founders_1_fullname_uchred*</td><td class="bvi-voice" itemprop="addressUchred">*founders_1_address_uchred*</td><td class="bvi-voice" itemprop="telUchred">*founders_1_tel_uchred*</td><td class="bvi-voice" itemprop="mailUchred">*founders_1_mail_uchred*</td><td class="bvi-voice" itemprop="websiteUchred">*founders_1_website_uchred*</td></tr></table></div>
                             <div>
                                 <h4>Филиалы</h4>
-                                <table class="table table-striped table-bordered" id="branch"><tr><th style="width: 35%;">Наименование филиала</th>
-                                        <th style="width: 35%;">Адрес местонахождения филиала образовательной организации</th>
-                                        <th style="width: 30%;">Адрес официального сайта в сети «Интернет» (при наличии)</th>
-                                    </tr><tr itemprop="filInfo"><td colspan="3">Филиалы отсутствуют</td></tr></table></div>
+                                <table class="table table-striped table-bordered" id="branch"><tr><th class="bvi-voice" style="width: 35%;">Наименование филиала</th>
+                                        <th class="bvi-voice" style="width: 35%;">Адрес местонахождения филиала образовательной организации</th>
+                                        <th class="bvi-voice" style="width: 30%;">Адрес официального сайта в сети «Интернет» (при наличии)</th>
+                                    </tr><tr class="bvi-voice" itemprop="filInfo"><td colspan="3">Филиалы отсутствуют</td></tr></table></div>
                         </div>
                     </div>
 
@@ -106,4 +124,9 @@
             </div>
 
         </div>
+        <script type='text/javascript'>
+/* <![CDATA[ */
+var bvi_init = {"bvi_init_setting":{"bvi_theme":"white","bvi_font":"arial","bvi_font_size":16,"bvi_letter_spacing":"normal","bvi_line_height":"normal","bvi_images":true,"bvi_reload":false,"bvi_fixed":true,"bvi_voice":true,"bvi_flash_iframe":true,"bvi_hide":false}};
+/* ]]> */
+</script>
     </body></html>

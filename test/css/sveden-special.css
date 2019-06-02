@@ -1,0 +1,12 @@
+.navbar-nav li a {
+    font-size: 30px !important;
+}
+#page_content {
+    font-size: 26px !important;
+}
+#page_content td, #page_content th {
+    font-size: 26px !important;
+}
+#page_content h4 {
+    font-size: 30px !important;
+}

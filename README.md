@@ -1,4 +1,6 @@
 # edutags
 Генератор тегов
 
-Test: http://ru.ko.tl:3000
+Test: https://edu.ko.tl
+
+Test template: https://mclvren.github.io/edutags/test/

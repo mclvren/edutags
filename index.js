@@ -7,6 +7,7 @@ const zip = require('express-easy-zip')
 const path = require('path')
 const fs = require('fs')
 const h = require('himalaya');
+const PORT = process.env.PORT || 5000
 // Create server
 const app = express()
 app.use(helmet())
@@ -71,9 +72,9 @@ low(adapter)
         return json;
       }
       common=h.stringify(FAR(json));
-      html = fs.readFileSync('info/common-ovz.html', {encoding: 'utf8'})
-      json = h.parse(html);
-      common_ovz=h.stringify(FAR(json));
+//      html = fs.readFileSync('info/common-ovz.html', {encoding: 'utf8'})
+//      json = h.parse(html);
+//      common_ovz=h.stringify(FAR(json));
       res.zip({
           files: [
               { content: common,
@@ -82,13 +83,14 @@ low(adapter)
                 comment: 'common',
                    date: new Date(),
                    type: 'file' },
-              { content: common_ovz,
-                   name: 'common-ovz.php',
-                   mode: 0755,
-                   comment: 'common_ovz',
-                   date: new Date(),
-                   type: 'file' },
+//              { content: common_ovz,
+//                   name: 'common-ovz.php',
+//                   mode: 0755,
+//                   comment: 'common_ovz',
+//                   date: new Date(),
+//                   type: 'file' },
               { path: path.join(__dirname, '/info/css'), name: '/css' },
+              { path: path.join(__dirname, '/info/fonts'), name: '/fonts' },
               { path: path.join(__dirname, '/info/js'), name: '/js' }
           ],
           filename: 'common.zip'
@@ -101,7 +103,7 @@ low(adapter)
     return db.defaults({ obr: [{"id":1}] }).write()
   })
   .then(() => {
-    app.listen(3000, () => console.log('listening on port 3000'));
+    app.listen(PORT, () => console.log('listening on port '+PORT));
     exports.closeServer = function(){
       app.close();
     };
