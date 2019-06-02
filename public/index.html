@@ -135,7 +135,7 @@
                   <div class="card-header">Добавление страницы</div>
                   <div class="card-body">
                     <form id="structure-form" class="AVAST_PAM_nonloginform">
-                      <input name="base[draft]" type="hidden" id="draft" value="">
+                      <!--<input name="base[draft]" type="hidden" id="draft" value="">-->
                       <div class="form_row col-md-12">
                         <h4><strong>Адреса зданий <nobr>и учебных</nobr> корпусов&nbsp;</strong></h4>
                         <textarea name="controls[0][name]" rows="5" class="name form-control"></textarea>
@@ -407,10 +407,10 @@
                       </div>
                       <hr>
                       <h4 class="text-primary"> Поля, отмеченные *, являются обязательными для заполнения </h4>
-                      <a class="btn btn-block btn-lg btn-warning" href="#">
-                        <i class="fa fa-fw fa-check"></i>
-                        <b>Сохранить</b>
-                      </a>
+                      <button class="btn btn-block btn-lg btn-warning" type="submit" id="save-btn" value="">
+                            <i class="fa fa-fw fa-check"></i>
+                            <b>Сохранить</b>
+                      </button>
                     </form>
                   </div>
                 </div>

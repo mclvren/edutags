@@ -34,17 +34,32 @@ function findAndReplace(object, value, replacevalue) {
 //БД
 low(adapter)
   .then(db => {
-  // POST /Сохранение информации об образовании
+  // POST /Сохранение информации об учреждении
     app.post('/saveInfo', urlencodedParser, (req, res) => {
-      db.get('obr')
+      db.get('info')
         .find({id: 1})
         .assign(req.body)
         .write()
-        .then(post => res.send(post))
+        .then(post => res.send(JSON.stringify('Info saved to DB')))
     })
-    // GET /Получение значений из БД
+    // POST /Сохранение структуры
+      app.post('/saveStructure', urlencodedParser, (req, res) => {
+        db.get('structure')
+          .find({id: 1})
+          .assign(req.body)
+          .write()
+          .then(post => res.send(JSON.stringify('Structure saved to DB')))
+      })
+    // GET /Получение значений информации из БД
     app.get('/load', (req, res) => {
-      const resp1 = db.get('obr')
+      const resp1 = db.get('info')
+        .find({id: 1})
+        .value()
+        res.send(resp1)
+    })
+    // GET /Получение значений структуры из БД
+    app.get('/loadStructure', (req, res) => {
+      const resp1 = db.get('structure')
         .find({id: 1})
         .value()
         res.send(resp1)
@@ -100,7 +115,7 @@ low(adapter)
       });
 });
     // Set db default values
-    return db.defaults({ obr: [{"id":1}] }).write()
+    return db.defaults({ info: [{"id":1}], structure: [{"id":1}] }).write()
   })
   .then(() => {
     app.listen(PORT, () => console.log('listening on port '+PORT));
