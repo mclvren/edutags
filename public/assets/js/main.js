@@ -1,4 +1,4 @@
-//Gloval
+//Global
 var isNull=false;
 //Функция отправки
 function sendAjaxForm(result_form, ajax_form, url) {
