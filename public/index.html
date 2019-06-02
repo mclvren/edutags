@@ -142,16 +142,16 @@
                 <div class="card mb-3" id="struktura">
                   <div class="card-header">Добавление страницы</div>
                   <div class="card-body">
-                    <form id="data_form" class="AVAST_PAM_nonloginform">
+                    <form id="structure-form" class="AVAST_PAM_nonloginform">
                       <input name="base[draft]" type="hidden" id="draft" value="">
-                      <h4><strong>Адреса зданий <nobr>и учебных</nobr> корпусов&nbsp;</strong></h4>
                       <div class="form_row col-md-12">
+                        <h4><strong>Адреса зданий <nobr>и учебных</nobr> корпусов&nbsp;</strong></h4>
                         <textarea name="controls[0][name]" rows="5" class="name form-control"></textarea>
                         <div class="error text-danger"></div>
                       </div>
                       <br>
-                      <h4>Кафедры</h4>
                       <div class="form_row col-md-12">
+                        <h4><strong>Кафедры</strong></h4>
                         <table class="table table-responsive" id="departments">
                           <tbody>
                             <tr>
@@ -221,7 +221,7 @@
                         <hr>
                       </div>
                       <h4><strong>Иные структурные подразделения</strong></h4>
-                      <table class="table table-responsive" id="departments">
+                      <table class="table table-responsive" id="departments_others">
                         <tbody>
                           <tr>
                             <th>&nbsp;&nbsp;</th>
@@ -234,62 +234,62 @@
                             <th>Положение о структурном подразделении</th>
                             <th>Контактный телефон</th>
                           </tr>
-                          <tr id="department_1">
+                          <tr id="department_others_1">
                             <td>
-                              <input type="checkbox" class="department row_checker" name="department_1" value="1">
+                              <input type="checkbox" class="department_others row_checker" name="department_others_1" value="1">
                             </td>
                             <td>
-                              <textarea name="departments[0][name]" rows="5" class="name form-control"></textarea>
+                              <textarea name="departments_others[0][name]" rows="5" class="name form-control"></textarea>
                               <div class="error text-danger"></div>
                             </td>
                             <td>
-                              <textarea name="departments[0][fio]" rows="5" class="fio form-control"></textarea>
+                              <textarea name="departments_others[0][fio]" rows="5" class="fio form-control"></textarea>
                               <div class="error text-danger"></div>
                             </td>
                             <td>
-                              <textarea name="departments[0][post]" rows="5" class="post form-control"></textarea>
+                              <textarea name="departments_others[0][post]" rows="5" class="post form-control"></textarea>
                               <div class="error text-danger"></div>
                             </td>
                             <td>
-                              <textarea name="departments[0][address_str]" rows="5" class="address_str form-control"></textarea>
+                              <textarea name="departments_others[0][address_str]" rows="5" class="address_str form-control"></textarea>
                               <div class="error text-danger"></div>
                             </td>
                             <td>
-                              <textarea name="departments[0][site]" rows="5" class="site form-control"></textarea>
+                              <textarea name="departments_others[0][site]" rows="5" class="site form-control"></textarea>
                               <div class="error text-danger"></div>
                             </td>
                             <td>
-                              <textarea name="departments[0][email]" rows="5" class="email form-control"></textarea>
+                              <textarea name="departments_others[0][email]" rows="5" class="email form-control"></textarea>
                               <div class="error text-danger"></div>
                             </td>
                             <td>
-                              <textarea name="departments[0][division_clause_doc_link]" rows="5" class="division_clause_doc_link form-control" placeholder="Ссылка на копию (при наличии положения)"></textarea>
+                              <textarea name="departments_others[0][division_clause_doc_link]" rows="5" class="division_clause_doc_link form-control" placeholder="Ссылка на копию (при наличии положения)"></textarea>
                               <div class="error text-danger"></div>
                             </td>
                             <td>
-                              <textarea name="departments[0][phone]" rows="5" class="phone form-control"></textarea>
+                              <textarea name="departments_others[0][phone]" rows="5" class="phone form-control"></textarea>
                               <div class="error text-danger"></div>
                             </td>
                           </tr>
                         </tbody>
                       </table>
                       <div class="btn-group">
-                        <button type="button" class="btn add add_department btn-warning mr-1" style="">
+                        <button type="button" class="btn add add_department_others btn-warning mr-1" style="">
                           <i class="fa fa-fw fa-plus"></i>
                           <span class="glyphicon glyphicon-plus"></span> Добавить
                         </button>
-                        <button type="button" class="btn btn-danger remove mr-1">
+                        <button type="button" class="btn btn-danger remove_others mr-1">
                           <i class="fa fa-fw fa-minus"></i>
                           <span class="glyphicon glyphicon-minus"></span> Удалить
                         </button>
-                        <button type="button" class="btn btn-danger remove_selected_departments">
+                        <button type="button" class="btn btn-danger remove_selected_departments_others">
                           <i class="fa fa-fw fa-minus-square"></i>
                           <span class="glyphicon glyphicon-remove"></span> Удалить выделенные
                         </button>
                       </div>
                       <hr>
                       <h4><strong>Студенческие органы управления, объединения, организации</strong></h4>
-                      <table class="table table-responsive" id="departments">
+                      <table class="table table-responsive" id="departments_st">
                         <tbody>
                           <tr>
                             <th>&nbsp;&nbsp;</th>
@@ -301,58 +301,58 @@
                             <th>Адреса электронной почты структурного подразделения (*)</th>
                             <th>Положение о структурном подразделении</th>
                           </tr>
-                          <tr id="department_1">
+                          <tr id="department_st_1">
                             <td>
-                              <input type="checkbox" class="department row_checker" name="department_1" value="1">
+                              <input type="checkbox" class="department_st row_checker" name="department_st_1" value="1">
                             </td>
                             <td>
-                              <textarea name="departments[0][name]" rows="5" class="name form-control"></textarea>
+                              <textarea name="departments_st[0][name]" rows="5" class="name form-control"></textarea>
                               <div class="error text-danger"></div>
                             </td>
                             <td>
-                              <textarea name="departments[0][fio]" rows="5" class="fio form-control"></textarea>
+                              <textarea name="departments_st[0][fio]" rows="5" class="fio form-control"></textarea>
                               <div class="error text-danger"></div>
                             </td>
                             <td>
-                              <textarea name="departments[0][post]" rows="5" class="post form-control"></textarea>
+                              <textarea name="departments_st[0][post]" rows="5" class="post form-control"></textarea>
                               <div class="error text-danger"></div>
                             </td>
                             <td>
-                              <textarea name="departments[0][address_str]" rows="5" class="address_str form-control"></textarea>
+                              <textarea name="departments_st[0][address_str]" rows="5" class="address_str form-control"></textarea>
                               <div class="error text-danger"></div>
                             </td>
                             <td>
-                              <textarea name="departments[0][site]" rows="5" class="site form-control"></textarea>
+                              <textarea name="departments_st[0][site]" rows="5" class="site form-control"></textarea>
                               <div class="error text-danger"></div>
                             </td>
                             <td>
-                              <textarea name="departments[0][email]" rows="5" class="email form-control"></textarea>
+                              <textarea name="departments_st[0][email]" rows="5" class="email form-control"></textarea>
                               <div class="error text-danger"></div>
                             </td>
                             <td>
-                              <textarea name="departments[0][division_clause_doc_link]" rows="5" class="division_clause_doc_link form-control" placeholder="Ссылка на копию (при наличии положения)"></textarea>
+                              <textarea name="departments_st[0][division_clause_doc_link]" rows="5" class="division_clause_doc_link form-control" placeholder="Ссылка на копию (при наличии положения)"></textarea>
                               <div class="error text-danger"></div>
                             </td>
                           </tr>
                         </tbody>
                       </table>
                       <div class="btn-group">
-                        <button type="button" class="btn add add_department btn-warning mr-1" style="">
+                        <button type="button" class="btn add add_department_st btn-warning mr-1" style="">
                           <i class="fa fa-fw fa-plus"></i>
                           <span class="glyphicon glyphicon-plus"></span> Добавить
                         </button>
-                        <button type="button" class="btn btn-danger remove mr-1">
+                        <button type="button" class="btn btn-danger remove_st mr-1">
                           <i class="fa fa-fw fa-minus"></i>
                           <span class="glyphicon glyphicon-minus"></span> Удалить
                         </button>
-                        <button type="button" class="btn btn-danger remove_selected_departments">
+                        <button type="button" class="btn btn-danger remove_selected_departments_st">
                           <i class="fa fa-fw fa-minus-square"></i>
                           <span class="glyphicon glyphicon-remove"></span> Удалить выделенные
                         </button>
                       </div>
                       <hr>
                       <h4><strong>Общественные организации</strong></h4>
-                      <table class="table table-responsive" id="departments">
+                      <table class="table table-responsive" id="departments_public">
                         <tbody>
                           <tr>
                             <th>&nbsp;&nbsp;</th>
@@ -364,51 +364,51 @@
                             <th>Адреса электронной почты структурного подразделения (*)</th>
                             <th>Положение о структурном подразделении</th>
                           </tr>
-                          <tr id="department_1">
+                          <tr id="department_public_1">
                             <td>
-                              <input type="checkbox" class="department row_checker" name="department_1" value="1">
+                              <input type="checkbox" class="department_public row_checker" name="department_public_1" value="1">
                             </td>
                             <td>
-                              <textarea name="departments[0][name]" rows="5" class="name form-control"></textarea>
+                              <textarea name="departments_public[0][name]" rows="5" class="name form-control"></textarea>
                               <div class="error text-danger"></div>
                             </td>
                             <td>
-                              <textarea name="departments[0][fio]" rows="5" class="fio form-control"></textarea>
+                              <textarea name="departments_public[0][fio]" rows="5" class="fio form-control"></textarea>
                               <div class="error text-danger"></div>
                             </td>
                             <td>
-                              <textarea name="departments[0][post]" rows="5" class="post form-control"></textarea>
+                              <textarea name="departments_public[0][post]" rows="5" class="post form-control"></textarea>
                               <div class="error text-danger"></div>
                             </td>
                             <td>
-                              <textarea name="departments[0][address_str]" rows="5" class="address_str form-control"></textarea>
+                              <textarea name="departments_public[0][address_str]" rows="5" class="address_str form-control"></textarea>
                               <div class="error text-danger"></div>
                             </td>
                             <td>
-                              <textarea name="departments[0][site]" rows="5" class="site form-control"></textarea>
+                              <textarea name="departments_public[0][site]" rows="5" class="site form-control"></textarea>
                               <div class="error text-danger"></div>
                             </td>
                             <td>
-                              <textarea name="departments[0][email]" rows="5" class="email form-control"></textarea>
+                              <textarea name="departments_public[0][email]" rows="5" class="email form-control"></textarea>
                               <div class="error text-danger"></div>
                             </td>
                             <td>
-                              <textarea name="departments[0][division_clause_doc_link]" rows="5" class="division_clause_doc_link form-control" placeholder="Ссылка на копию (при наличии положения)"></textarea>
+                              <textarea name="departments_public[0][division_clause_doc_link]" rows="5" class="division_clause_doc_link form-control" placeholder="Ссылка на копию (при наличии положения)"></textarea>
                               <div class="error text-danger"></div>
                             </td>
                           </tr>
                         </tbody>
                       </table>
                       <div class="btn-group">
-                        <button type="button" class="btn add add_department btn-warning mr-1" style="">
+                        <button type="button" class="btn add add_department_public btn-warning mr-1" style="">
                           <i class="fa fa-fw fa-plus"></i>
                           <span class="glyphicon glyphicon-plus"></span> Добавить
                         </button>
-                        <button type="button" class="btn btn-danger remove mr-1">
+                        <button type="button" class="btn btn-danger remove_public mr-1">
                           <i class="fa fa-fw fa-minus"></i>
                           <span class="glyphicon glyphicon-minus"></span> Удалить
                         </button>
-                        <button type="button" class="btn btn-danger remove_selected_departments">
+                        <button type="button" class="btn btn-danger remove_selected_departments_public">
                           <i class="fa fa-fw fa-minus-square"></i>
                           <span class="glyphicon glyphicon-remove"></span> Удалить выделенные
                         </button>
@@ -427,7 +427,7 @@
                 <div class="card mb-3" id="documenty" style="">
                   <div class="card-header"> Добавление страницы </div>
                   <div class="card-body">
-                    <form id="data_form" class="AVAST_PAM_nonloginform">
+                    <form id="docs-form" class="AVAST_PAM_nonloginform">
                       <input name="base[draft]" type="hidden" id="draft" value="" style="">
                       <h4>Устав образовательной организации</h4>
                       <div class="form_row col-md-12">
@@ -1153,6 +1153,9 @@
     <script async="" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/functions.js"></script>
+    <script src="assets/js/alerts.js"></script>
+    <script src="assets/js/table-buttons.js"></script>
     <script style="">
       $("#svedenia").addClass("d-none");
       $("#struktura").addClass("d-none");
@@ -1177,6 +1180,33 @@
         $("#obrstand").toggleClass("d-none");
       });
     </script>
+    <!-- Всплывающее окно для сообщений -->
+
+<div id="messengerWindow" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header float-left">
+                <h4 class="modal-title">Внимание</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div style="display: none;">
+    <div class="alert alert-dismissable fade in">
+        <a href="#" class="close" data-dismiss="alert" aria-label="Закрыть">×</a>
+        <strong id="alert_status"></strong> <span id="alert_message"></span>
+    </div>
+</div>
+
   </body>
 
 </html>
