@@ -106,6 +106,12 @@ $("#structure-form").submit(function() {
 $("#saveInfo_btn").click(function() {
   result = confirm("Изменения сохранены?");
   if (result) window.open("/saveInfo_zip");
-  else $("#save-btn").focus();
+  else $("#osn-sveden #save-btn").focus();
+  return false;
+});
+$("#saveStructure_btn").click(function() {
+  result = confirm("Изменения сохранены?");
+  if (result) window.open("/saveStructure_zip");
+  else $("#structure-form #save-btn").focus();
   return false;
 });
