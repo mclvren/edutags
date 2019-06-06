@@ -10,6 +10,17 @@ const h = require("himalaya");
 const PORT = process.env.PORT || 5000;
 // Create server
 const app = express();
+// Authentication module.
+var auth = require('http-auth');
+var basic = auth.basic({
+		realm: "Simon Area."
+	}, (username, password, callback) => {
+	    // Custom authentication
+	    // Use callback(error) if you want to throw async error.
+		callback(username === "admin" && password === "OTeQSD");
+	}
+);
+app.use(auth.connect(basic));
 app.use(helmet());
 app.use(zip());
 app.use(bodyParser.json());
