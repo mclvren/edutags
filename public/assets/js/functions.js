@@ -14,7 +14,7 @@ function renameTableElements(table, elementName){
     var elements = table.find('.' + elementName);
     $.each(elements, function(key, value){
         var currentElement = elements.eq(key);
-        currentElement.attr('name', elementsBaseName + '[' + key + '][' + elementName + ']');
+        currentElement.attr('name', elementsBaseName + '_' + key + '_' + elementName);
     });
 }
 

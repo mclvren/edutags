@@ -56,7 +56,7 @@ function renameTableElements_D(table, elementName) {
     var currentElement = elements.eq(key);
     currentElement.attr(
       "name",
-      elementsBaseName + "[" + key + "][" + elementName + "]"
+      elementsBaseName + "_" + key + "_" + elementName
     );
   });
 }

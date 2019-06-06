@@ -26,7 +26,9 @@ function findAndReplace(object, value, replacevalue) {
       }
       if (object[x] == value) {
         object["content"] = replacevalue;
-        break; // uncomment to stop after first replacement
+        object["value"] = replacevalue;
+        console.log(value+" replaced with "+replacevalue);
+        //break; // uncomment to stop after first replacement
       }
     }
   }
@@ -42,6 +44,7 @@ low(adapter)
         .assign(req.body)
         .write()
         .then(post => res.send(JSON.stringify("Info saved to DB")));
+        console.log("Info saved via AJAX");
     });
     // POST /Сохранение структуры
     app.post("/saveStructure", urlencodedParser, (req, res) => {
@@ -51,6 +54,7 @@ low(adapter)
         .assign(req.body)
         .write()
         .then(post => res.send(JSON.stringify("Structure saved to DB")));
+        console.log("Structure saved via AJAX");
     });
     // GET /Получение значений информации из БД
     app.get("/load", (req, res) => {
@@ -59,6 +63,7 @@ low(adapter)
         .find({ id: 1 })
         .value();
       res.send(resp1);
+      console.log("Info loaded via AJAX");
     });
     // GET /Получение значений структуры из БД
     app.get("/loadStructure", (req, res) => {
@@ -67,6 +72,7 @@ low(adapter)
         .find({ id: 1 })
         .value();
       res.send(resp1);
+      console.log("Structure loaded via AJAX");
     });
     //Освновные сведения (скачать)
     app.get("/saveInfo_zip", function(req, res) {
@@ -114,19 +120,66 @@ low(adapter)
         .catch(function(err) {
           res.send(err); //if zip failed
         });
+        console.log("Common.zip generated");
     });
-    //Структура (скачать) (доделать)
+    //Структура (скачать)
     app.get("/saveStructure_zip", function(req, res) {
       var html = fs.readFileSync("struct/struct.html", { encoding: "utf8" });
       var json = h.parse(html);
+      console.log(json);
       const values = db
         .get("structure")
         .find({ id: 1 })
         .value();
       // Замена полей в шаблоне
       function FAR(json) {
+        //Адреса
         findAndReplace(json, "*struc_address*", values.controls_0_name);
-        //.....
+        //Иные
+        for (var i = 0; i < 14; i++) {
+          n=i+1;
+          findAndReplace(json, "*others_name_"+n+"*", eval("values.departments_others_"+i+"_name"));
+          findAndReplace(json, "*others_fio_"+n+"*", eval("values.departments_others_"+i+"_fio"));
+          findAndReplace(json, "*others_post_"+n+"*", eval("values.departments_others_"+i+"_post"));
+          findAndReplace(json, "*others_address_"+n+"*", eval("values.departments_others_"+i+"_address_str"));
+          findAndReplace(json, "*others_site_"+n+"*", eval("values.departments_others_"+i+"_site"));
+          findAndReplace(json, "*others_email_"+n+"*", eval("values.departments_others_"+i+"_email"));
+          findAndReplace(json, "*others_doc_link_"+n+"*", eval("values.departments_others_"+i+"_division_clause_doc_link"));
+          findAndReplace(json, "*others_phone_"+n+"*", eval("values.departments_others_"+i+"_phone"));
+        }
+        //Кафедры
+        for (var i = 0; i < 6; i++) {
+          n=i+1;
+          findAndReplace(json, "*kaf_name_"+n+"*", eval("values.departments_"+i+"_name"));
+          findAndReplace(json, "*kaf_fio_"+n+"*", eval("values.departments_"+i+"_fio"));
+          findAndReplace(json, "*kaf_post_"+n+"*", eval("values.departments_"+i+"_post"));
+          findAndReplace(json, "*kaf_address_"+n+"*", eval("values.departments_"+i+"_address_str"));
+          findAndReplace(json, "*kaf_site_"+n+"*", eval("values.departments_"+i+"_site"));
+          findAndReplace(json, "*kaf_email_"+n+"*", eval("values.departments_"+i+"_email"));
+          findAndReplace(json, "*kaf_doc_link_"+n+"*", eval("values.departments_"+i+"_division_clause_doc_link"));
+        }
+        //Студенческие органы управления, объединения, организации
+        for (var i = 0; i < 2; i++) {
+          n=i+1;
+          findAndReplace(json, "*stud_name_"+n+"*", eval("values.departments_st_"+i+"_name"));
+          findAndReplace(json, "*stud_fio_"+n+"*", eval("values.departments_st_"+i+"_fio"));
+          findAndReplace(json, "*stud_post_"+n+"*", eval("values.departments_st_"+i+"_post"));
+          findAndReplace(json, "*stud_address_"+n+"*", eval("values.departments_st_"+i+"_address_str"));
+          findAndReplace(json, "*stud_site_"+n+"*", eval("values.departments_st_"+i+"_site"));
+          findAndReplace(json, "*stud_email_"+n+"*", eval("values.departments_st_"+i+"_email"));
+          findAndReplace(json, "*stud_doc_link_"+n+"*", eval("values.departments_st_"+i+"_division_clause_doc_link"));
+        }
+        //Общественные организации
+        for (var i = 0; i < 2; i++) {
+          n=i+1;
+          findAndReplace(json, "*pub_name_"+n+"*", eval("values.departments_public_"+i+"_name"));
+          findAndReplace(json, "*pub_fio_"+n+"*", eval("values.departments_public_"+i+"_fio"));
+          findAndReplace(json, "*pub_post_"+n+"*", eval("values.departments_public_"+i+"_post"));
+          findAndReplace(json, "*pub_address_"+n+"*", eval("values.departments_public_"+i+"_address_str"));
+          findAndReplace(json, "*pub_site_"+n+"*", eval("values.departments_public_"+i+"_site"));
+          findAndReplace(json, "*pub_email_"+n+"*", eval("values.departments_public_"+i+"_email"));
+          findAndReplace(json, "*pub_doc_link_"+n+"*", eval("values.departments_public_"+i+"_division_clause_doc_link"));
+        }
         return json;
       }
       common = h.stringify(FAR(json));
@@ -150,6 +203,7 @@ low(adapter)
         .catch(function(err) {
           res.send(err); //if zip failed
         });
+        console.log("structure.zip generated");
     });
     // Set db default values
     return db.defaults({ info: [{ id: 1 }], structure: [{ id: 1 }] }).write();

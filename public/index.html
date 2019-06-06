@@ -138,7 +138,7 @@
                       <!--<input name="base_draft]" type="hidden" id="draft" value="">-->
                       <div class="form_row col-md-12">
                         <h4><strong>Адреса зданий <nobr>и учебных</nobr> корпусов&nbsp;</strong></h4>
-                        <textarea name="controls[0_name]" rows="5" class="name form-control"></textarea>
+                        <textarea name="controls_0_name" rows="5" class="name form-control"></textarea>
                         <div class="error text-danger"></div>
                       </div>
                       <br>
@@ -162,7 +162,7 @@
                                 <input type="checkbox" class="department row_checker" name="department_1" value="1">
                               </td>
                               <td>
-                                <textarea name="departments0_name" rows="5" class="name form-control"></textarea>
+                                <textarea name="departments_0_name" rows="5" class="name form-control"></textarea>
                                 <div class="error text-danger"></div>
                               </td>
                               <td>
@@ -376,6 +376,43 @@
                               </td>
                               <td>
                                 <textarea name="departments_5_phone" rows="5" class="phone form-control"></textarea>
+                                <div class="error text-danger"></div>
+                              </td>
+                            </tr>
+                            <tr id="department_7">
+                              <td>
+                                <input type="checkbox" class="department row_checker" name="department_7" value="">
+                              </td>
+                              <td>
+                                <textarea name="departments_6_name" rows="5" class="name form-control"></textarea>
+                                <div class="error text-danger"></div>
+                              </td>
+                              <td>
+                                <textarea name="departments_6_fio" rows="5" class="fio form-control"></textarea>
+                                <div class="error text-danger"></div>
+                              </td>
+                              <td>
+                                <textarea name="departments_6_post" rows="5" class="post form-control"></textarea>
+                                <div class="error text-danger"></div>
+                              </td>
+                              <td>
+                                <textarea name="departments_6_address_str" rows="5" class="address_str form-control"></textarea>
+                                <div class="error text-danger"></div>
+                              </td>
+                              <td>
+                                <textarea name="departments_6_site" rows="5" class="site form-control"></textarea>
+                                <div class="error text-danger"></div>
+                              </td>
+                              <td>
+                                <textarea name="departments_6_email" rows="5" class="email form-control"></textarea>
+                                <div class="error text-danger"></div>
+                              </td>
+                              <td>
+                                <textarea name="departments_6_division_clause_doc_link" rows="5" class="division_clause_doc_link form-control" placeholder="Ссылка на копию (при наличии положения)"></textarea>
+                                <div class="error text-danger"></div>
+                              </td>
+                              <td>
+                                <textarea name="departments_6_phone" rows="5" class="phone form-control"></textarea>
                                 <div class="error text-danger"></div>
                               </td>
                             </tr>
@@ -916,7 +953,46 @@
                               <textarea name="departments_others_13_phone" rows="5" class="phone form-control"></textarea>
                               <div class="error text-danger"></div>
                             </td>
-                          </tr></tbody>
+                          </tr>
+                        </tr><tr id="department_others_15">
+                          <td>
+                            <input type="checkbox" class="department_others row_checker" name="department_others_14" value="">
+                          </td>
+                          <td>
+                            <textarea name="departments_others_14_name" rows="5" class="name form-control"></textarea>
+                            <div class="error text-danger"></div>
+                          </td>
+                          <td>
+                            <textarea name="departments_others_14_fio" rows="5" class="fio form-control"></textarea>
+                            <div class="error text-danger"></div>
+                          </td>
+                          <td>
+                            <textarea name="departments_others_14_post" rows="5" class="post form-control"></textarea>
+                            <div class="error text-danger"></div>
+                          </td>
+                          <td>
+                            <textarea name="departments_others_14_address_str" rows="5" class="address_str form-control"></textarea>
+                            <div class="error text-danger"></div>
+                          </td>
+                          <td>
+                            <textarea name="departments_others_14_site" rows="5" class="site form-control"></textarea>
+                            <div class="error text-danger"></div>
+                          </td>
+                          <td>
+                            <textarea name="departments_others_14_email" rows="5" class="email form-control"></textarea>
+                            <div class="error text-danger"></div>
+                          </td>
+                          <td>
+                            <textarea name="departments_others_14_division_clause_doc_link" rows="5" class="division_clause_doc_link form-control" placeholder="Ссылка на копию (при наличии положения)"></textarea>
+                            <div class="error text-danger"></div>
+                          </td>
+                          <td>
+                            <textarea name="departments_others_14_phone" rows="5" class="phone form-control"></textarea>
+                            <div class="error text-danger"></div>
+                          </td>
+                        </tr>
+
+                        </tbody>
                       </table>
                       <div class="btn-group">
                         <button type="button" class="btn add add_department_others btn-warning mr-1" style="">
@@ -976,6 +1052,72 @@
                             </td>
                             <td>
                               <textarea name="departments_st_0_division_clause_doc_link" rows="5" class="division_clause_doc_link form-control" placeholder="Ссылка на копию (при наличии положения)"></textarea>
+                              <div class="error text-danger"></div>
+                            </td>
+                          </tr>
+                          <tr id="department_st_2">
+                            <td>
+                              <input type="checkbox" class="department_st row_checker" name="department_st_2" value="1">
+                            </td>
+                            <td>
+                              <textarea name="departments_st_1_name" rows="5" class="name form-control"></textarea>
+                              <div class="error text-danger"></div>
+                            </td>
+                            <td>
+                              <textarea name="departments_st_1_fio" rows="5" class="fio form-control"></textarea>
+                              <div class="error text-danger"></div>
+                            </td>
+                            <td>
+                              <textarea name="departments_st_1_post" rows="5" class="post form-control"></textarea>
+                              <div class="error text-danger"></div>
+                            </td>
+                            <td>
+                              <textarea name="departments_st_1_address_str" rows="5" class="address_str form-control"></textarea>
+                              <div class="error text-danger"></div>
+                            </td>
+                            <td>
+                              <textarea name="departments_st_1_site" rows="5" class="site form-control"></textarea>
+                              <div class="error text-danger"></div>
+                            </td>
+                            <td>
+                              <textarea name="departments_st_1_email" rows="5" class="email form-control"></textarea>
+                              <div class="error text-danger"></div>
+                            </td>
+                            <td>
+                              <textarea name="departments_st_1_division_clause_doc_link" rows="5" class="division_clause_doc_link form-control" placeholder="Ссылка на копию (при наличии положения)"></textarea>
+                              <div class="error text-danger"></div>
+                            </td>
+                          </tr>
+                          <tr id="department_st_3">
+                            <td>
+                              <input type="checkbox" class="department_st row_checker" name="department_st_3" value="1">
+                            </td>
+                            <td>
+                              <textarea name="departments_st_2_name" rows="5" class="name form-control"></textarea>
+                              <div class="error text-danger"></div>
+                            </td>
+                            <td>
+                              <textarea name="departments_st_2_fio" rows="5" class="fio form-control"></textarea>
+                              <div class="error text-danger"></div>
+                            </td>
+                            <td>
+                              <textarea name="departments_st_2_post" rows="5" class="post form-control"></textarea>
+                              <div class="error text-danger"></div>
+                            </td>
+                            <td>
+                              <textarea name="departments_st_2_address_str" rows="5" class="address_str form-control"></textarea>
+                              <div class="error text-danger"></div>
+                            </td>
+                            <td>
+                              <textarea name="departments_st_2_site" rows="5" class="site form-control"></textarea>
+                              <div class="error text-danger"></div>
+                            </td>
+                            <td>
+                              <textarea name="departments_st_2_email" rows="5" class="email form-control"></textarea>
+                              <div class="error text-danger"></div>
+                            </td>
+                            <td>
+                              <textarea name="departments_st_2_division_clause_doc_link" rows="5" class="division_clause_doc_link form-control" placeholder="Ссылка на копию (при наличии положения)"></textarea>
                               <div class="error text-danger"></div>
                             </td>
                           </tr>
@@ -1042,6 +1184,72 @@
                               <div class="error text-danger"></div>
                             </td>
                           </tr>
+                          <tr id="department_public_2">
+                            <td>
+                              <input type="checkbox" class="department_public row_checker" name="department_public_2" value="1">
+                            </td>
+                            <td>
+                              <textarea name="departments_public_1_name" rows="5" class="name form-control"></textarea>
+                              <div class="error text-danger"></div>
+                            </td>
+                            <td>
+                              <textarea name="departments_public_1_fio" rows="5" class="fio form-control"></textarea>
+                              <div class="error text-danger"></div>
+                            </td>
+                            <td>
+                              <textarea name="departments_public_1_post" rows="5" class="post form-control"></textarea>
+                              <div class="error text-danger"></div>
+                            </td>
+                            <td>
+                              <textarea name="departments_public_1_address_str" rows="5" class="address_str form-control"></textarea>
+                              <div class="error text-danger"></div>
+                            </td>
+                            <td>
+                              <textarea name="departments_public_1_site" rows="5" class="site form-control"></textarea>
+                              <div class="error text-danger"></div>
+                            </td>
+                            <td>
+                              <textarea name="departments_public_1_email" rows="5" class="email form-control"></textarea>
+                              <div class="error text-danger"></div>
+                            </td>
+                            <td>
+                              <textarea name="departments_public_1_division_clause_doc_link" rows="5" class="division_clause_doc_link form-control" placeholder="Ссылка на копию (при наличии положения)"></textarea>
+                              <div class="error text-danger"></div>
+                            </td>
+                          </tr>
+                          <tr id="department_public_3">
+                            <td>
+                              <input type="checkbox" class="department_public row_checker" name="department_public_3" value="1">
+                            </td>
+                            <td>
+                              <textarea name="departments_public_2_name" rows="5" class="name form-control"></textarea>
+                              <div class="error text-danger"></div>
+                            </td>
+                            <td>
+                              <textarea name="departments_public_2_fio" rows="5" class="fio form-control"></textarea>
+                              <div class="error text-danger"></div>
+                            </td>
+                            <td>
+                              <textarea name="departments_public_2_post" rows="5" class="post form-control"></textarea>
+                              <div class="error text-danger"></div>
+                            </td>
+                            <td>
+                              <textarea name="departments_public_2_address_str" rows="5" class="address_str form-control"></textarea>
+                              <div class="error text-danger"></div>
+                            </td>
+                            <td>
+                              <textarea name="departments_public_2_site" rows="5" class="site form-control"></textarea>
+                              <div class="error text-danger"></div>
+                            </td>
+                            <td>
+                              <textarea name="departments_public_2_email" rows="5" class="email form-control"></textarea>
+                              <div class="error text-danger"></div>
+                            </td>
+                            <td>
+                              <textarea name="departments_public_2_division_clause_doc_link" rows="5" class="division_clause_doc_link form-control" placeholder="Ссылка на копию (при наличии положения)"></textarea>
+                              <div class="error text-danger"></div>
+                            </td>
+                          </tr>
                         </tbody>
                       </table>
                       <div class="btn-group">
@@ -1067,9 +1275,10 @@
                     </form>
                   </div>
                 </div>
-                <a class="btn btn-primary btn-block btn-lg mb-2" href="#documenty" id="doc-btn">
+                <!-- Документы не доделаны -->
+                <a class="btn btn-primary btn-block btn-lg mb-2 d-none" href="#documenty" id="doc-btn">
                   <i class="fa fa-fw fa-plus"></i>Документы</a>
-                <div class="card mb-3" id="documenty" style="">
+                <div class="card mb-3 d-none" id="documenty" style="">
                   <div class="card-header"> Добавление страницы </div>
                   <div class="card-body">
                     <form id="docs-form" class="AVAST_PAM_nonloginform">
@@ -1852,7 +2061,14 @@
         <strong id="alert_status"></strong> <span id="alert_message"></span>
     </div>
 </div>
-
+<script>
+  $(document).ready(function() {
+    $('table tr td textarea').each(function(){
+          var text22 = $(this).val();
+          if (text22=="") {$(this).closest('tr').remove();}
+    });
+  });
+</script>
   </body>
 
 </html>
