@@ -41,12 +41,16 @@ $.getJSON("/loadStructure", {}, function(json) {
   // преобразуем JSON в массив
   json_data = JSON.parse(JSON.stringify(json));
   // выводим данные
-  if ($inputs.length !== json_data.length) {
-    console.log("Массив БД больше чем кол-во $inputs");
-  }
   $inputs.each(function() {
     input_name = [this.name];
     $(this).val(json_data[input_name]);
+  });
+  //Очищаем пустые строки
+  $(document).ready(function() {
+    $('table textarea').each(function(){
+          var text22 = $(this).val();
+          if (text22=='') {$(this).closest('tr').remove();}
+    });
   });
 });
 // Функция проверки полей на заполненность
