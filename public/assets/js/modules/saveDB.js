@@ -1,4 +1,4 @@
-export default function saveDB(callback) {
+function saveDB() {
   //Функция отправки
   function sendAjaxForm(result_form, ajax_form, url) {
     jQuery.ajax({
@@ -57,7 +57,6 @@ export default function saveDB(callback) {
           return false;
         }
       }
-      e.preventDefault();
       return false;
     });
     //Сохранение Структуры
@@ -75,9 +74,8 @@ export default function saveDB(callback) {
           if (result) sendAjaxForm("result_form", "structure-form", "/saveStructure");
         }
       }
-      e.preventDefault(); 
       return false;
     });
   });
-  callback();
 }
+saveDB();

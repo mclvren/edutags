@@ -1,5 +1,5 @@
 //Выгрузка основных сведений из БД
-export function info(callback) {
+function info(callback) {
   //Загрузка данных в сведения из БД
   $.getJSON("/load", {}, function(json) {
     // загрузка JSON данных из БД
@@ -17,7 +17,7 @@ export function info(callback) {
   callback();
 }
 //Выгрузка структуры из БД
-export function struc(callback) {
+function struc(callback) {
   //Загрузка данных в сведения из БД (доделать)
   $.getJSON("/loadStructure", {}, function(json) {
     // загрузка JSON данных из БД
