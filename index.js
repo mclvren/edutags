@@ -7,17 +7,23 @@ const zip = require("express-easy-zip");
 const path = require("path");
 const fs = require("fs");
 const h = require("himalaya");
+const cors = require('cors')
 const PORT = process.env.PORT || 5000;
 // Create server
 const app = express();
+// for localhost
+app.use(cors());
 // Authentication module.
 var auth = require('http-auth');
+//Данные для входа
+var set_username = "admin";
+var set_password = "OTeQSD";
 var basic = auth.basic({
 		realm: "Simon Area."
 	}, (username, password, callback) => {
 	    // Custom authentication
 	    // Use callback(error) if you want to throw async error.
-		callback(username === "admin" && password === "OTeQSD");
+		callback(username === set_username && password === set_password);
 	}
 );
 app.use(auth.connect(basic));
@@ -220,7 +226,8 @@ low(adapter)
     return db.defaults({ info: [{ id: 1 }], structure: [{ id: 1 }] }).write();
   })
   .then(() => {
-    app.listen(PORT, () => console.log("listening on port " + PORT));
+    var server = app.listen(PORT, () => 	console.log("Приложение доступно по адрессу http://" + server.address().address + ":" + server.address().port));
+	console.log("Логин: "+set_username+" Пароль: "+set_password);
     exports.closeServer = function() {
       app.close();
     };
