@@ -71,7 +71,32 @@ function saveDB() {
           return false;
         } else {
           result = confirm("Обнаружено пустое поле, подвердить запись?");
-          if (result) sendAjaxForm("result_form", "structure-form", "/saveStructure");
+          if (result) {
+            $('html body').stop(true);
+            not_danger($inputs);
+            sendAjaxForm("result_form", "structure-form", "/saveStructure");
+          }
+        }
+      }
+      return false;
+    });
+    //Сохранение Структуры
+    $("#docs-form").submit(function() {
+      result = confirm("Данные будут перезаписаны!");
+      if (result) {
+        var $inputs = $("#docs-form :input");
+        check_input($inputs);
+        not_danger($inputs);
+        if (isNull == false) {
+          sendAjaxForm("result_form", "docs-form", "/saveDocs");
+          return false;
+        } else {
+          result = confirm("Обнаружено пустое поле, подвердить запись?");
+          if (result) {
+            $('html body').stop(true);
+            not_danger($inputs);
+            sendAjaxForm("result_form", "docs-form", "/saveDocs");
+          }
         }
       }
       return false;

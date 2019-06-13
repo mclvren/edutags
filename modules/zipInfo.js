@@ -4,7 +4,7 @@ const far_js = require('./far.js');
 findAndReplace = far_js.findAndReplace;
 module.exports.func = function(app,db,fs,h, path, zip) {
   app.get("/saveInfo_zip", function(req, res) {
-    var html = fs.readFileSync(__dirname+"/info/common.html", {
+    var html = fs.readFileSync(__dirname+"/templates/info/common.html", {
       encoding: "utf8"
     });
     var json = h.parse(html);
@@ -43,15 +43,15 @@ module.exports.func = function(app,db,fs,h, path, zip) {
             type: "file"
           },
           {
-            path: path.join(__dirname, "/info/css"),
+            path: path.join(__dirname, "/templates//info/css"),
             name: "/common/css"
           },
           {
-            path: path.join(__dirname, "/info/fonts"),
+            path: path.join(__dirname, "/templates//info/fonts"),
             name: "/common/fonts"
           },
           {
-            path: path.join(__dirname, "/info/js"),
+            path: path.join(__dirname, "/templates//info/js"),
             name: "/common/js"
           }
         ],

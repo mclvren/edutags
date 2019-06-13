@@ -3,14 +3,14 @@ const far_js = require('./far.js');
 //Функция поиска и замены
 findAndReplace = far_js.findAndReplace;
 module.exports.func = function(app, db, fs, h, path, zip, others_n, kaf_n, stud_n, pub_n) {
-  app.get("/saveStructure_zip", function(req, res) {
-    var html = fs.readFileSync(__dirname+"/templates/struct/struct.html", {
+  app.get("/saveDocs_zip", function(req, res) {
+    var html = fs.readFileSync(__dirname+"/templates/docs/docs.html", {
       encoding: "utf8"
     });
     var json = h.parse(html);
     console.log(json);
     const values = db
-      .get("structure")
+      .get("docs")
       .find({
         id: 1
       })

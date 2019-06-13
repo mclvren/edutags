@@ -241,5 +241,47 @@
       "departments_public_2_email": "",
       "departments_public_2_division_clause_doc_link": ""
     }
+  ],
+  "docs": [
+    {
+      "id": 1,
+      "base[draft]": "",
+      "ustavs_0_name": "1",
+      "ustavs_0_url": "1",
+      "licenses_0_name": "",
+      "licenses_0_url": "",
+      "accreditations_0_name": "",
+      "accreditations_0_url": "",
+      "fin_plans_0_name": "",
+      "fin_plans_0_url": "",
+      "priems_0_name": "",
+      "priems_0_url": "",
+      "modes_0_name": "",
+      "modes_0_url": "",
+      "tek_kontrols_0_name": "",
+      "tek_kontrols_0_url": "",
+      "perevods_0_name": "",
+      "perevods_0_url": "",
+      "vozes_0_name": "",
+      "vozes_0_url": "",
+      "local_act_studs_0_name": "",
+      "local_act_studs_0_url": "",
+      "local_act_orders_0_name": "",
+      "local_act_orders_0_url": "",
+      "local_act_collecs_0_name": "",
+      "local_act_collecs_0_url": "",
+      "report_edus_0_name": "",
+      "report_edus_0_url": "",
+      "paid_edus_0_name": "",
+      "paid_edus_0_url": "",
+      "paid_edu_dogs_0_name": "",
+      "paid_edu_dogs_0_url": "",
+      "paid_edu_stoims_0_name": "",
+      "paid_edu_stoims_0_url": "",
+      "prescriptions_0_name": "",
+      "prescriptions_0_url": "",
+      "prescription_otchets_0_name": "",
+      "prescription_otchets_0_url": ""
+    }
   ]
 }

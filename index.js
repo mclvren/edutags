@@ -38,8 +38,10 @@ const adapter = new FileAsync("db.json");
 //Подключение модулей
 const loadInfo = require('./modules/loadInfo.js');
 const loadStruct = require('./modules/loadStruct.js');
+const loadDocs = require('./modules/loadDocs.js');
 const saveInfo = require('./modules/saveInfo.js');
 const saveStruct = require('./modules/saveStruct.js');
+const saveDocs = require('./modules/saveDocs.js');
 const zipInfo = require('./modules/zipInfo.js');
 const zipStruct = require('./modules/zipStruct.js');
 //БД
@@ -49,16 +51,20 @@ low(adapter)
 		saveInfo.func(app, db);
     // Сохранение структуры
 		saveStruct.func(app, db);
+		// Сохранение структуры
+		saveDocs.func(app, db);
     // Получение значений информации из БД
 		loadInfo.func(app, db);
     // Получение значений структуры из БД
 		loadStruct.func(app, db);
+		// Получение значений информации из БД
+		loadDocs.func(app, db);
     // Основные сведения (скачать)
 		zipInfo.func(app, db, fs, h, path, zip);
     // Структура (скачать)
 		zipStruct.func(app, db, fs, h, path, zip, config.others_n, config.kaf_n, config.stud_n, config.pub_n);
     // Стандартные значения дла БД
-    return db.defaults({ info: [{ id: 1 }], structure: [{ id: 1 }] }).write();
+    return db.defaults({ info: [{ id: 1 }], structure: [{ id: 1 }], docs: [{ id: 1 }] }).write();
   })
   .then(() => {
     var server = app.listen(PORT, () => 	console.log("Приложение доступно по адрессу http://" + server.address().address + ":" + server.address().port));
