@@ -19,7 +19,7 @@ module.exports.func = function(app, db, fs, h, path, zip, docs_n) {
     function FAR(json) {
       //Иные
       for (var i = 0; i < docs_n; i++) {
-        n = i + 1;
+        n = i;
         findAndReplace(json, "*ustavs_" + n + "_name*", eval("values.ustavs_" + i + "_name"));
         findAndReplace(json, "*ustavs_" + n + "_url*", eval("values.ustavs_" + i + "_url"));
         findAndReplace(json, "*licenses_" + n + "_name*", eval("values.licenses_" + i + "_name"));
@@ -66,7 +66,7 @@ module.exports.func = function(app, db, fs, h, path, zip, docs_n) {
             content: document,
             name: "/document/index.php",
             mode: 0755,
-            comment: "structure",
+            comment: "docs",
             date: new Date(),
             type: "file"
           },

@@ -44,6 +44,7 @@ const saveStruct = require('./modules/saveStruct.js');
 const saveDocs = require('./modules/saveDocs.js');
 const zipInfo = require('./modules/zipInfo.js');
 const zipStruct = require('./modules/zipStruct.js');
+const zipDocs = require('./modules/zipDocs.js');
 //БД
 low(adapter)
   .then(db => {
@@ -63,6 +64,8 @@ low(adapter)
 		zipInfo.func(app, db, fs, h, path, zip);
     // Структура (скачать)
 		zipStruct.func(app, db, fs, h, path, zip, config.others_n, config.kaf_n, config.stud_n, config.pub_n);
+		// Структура (скачать)
+		zipDocs.func(app, db, fs, h, path, zip, config.docs_n);
     // Стандартные значения дла БД
     return db.defaults({ info: [{ id: 1 }], structure: [{ id: 1 }], docs: [{ id: 1 }] }).write();
   })

@@ -12,3 +12,10 @@ $("#saveStructure_btn").click(function() {
   else $("#structure-form #save-btn").focus();
   return false;
 });
+//Скачивание архива с структурой
+$("#saveDocs_btn").click(function() {
+  var result = confirm("Изменения сохранены?");
+  if (result) window.open("/saveDocs_zip");
+  else $("#docs-form #docs-btn").focus();
+  return false;
+});
