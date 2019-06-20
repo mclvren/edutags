@@ -1,5 +1,6 @@
 _pgbackup
 start
+pinegrow.json
 # General
 .DS_Store
 .AppleDouble
